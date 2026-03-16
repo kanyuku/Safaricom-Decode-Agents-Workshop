@@ -1,0 +1,109 @@
+{
+  "business": {
+    "name": "Mama Mboga Fresh Supplies",
+    "tagline": "Fresh from the farm, straight to your table",
+    "founded": 2018,
+    "location": "Stall 14, Gikomba Market, Nairobi",
+    "phone": "+254 712 345 678",
+    "whatsapp": "+254 712 345 678",
+    "email": "orders@mamambogafresh.co.ke",
+    "mpesa_paybill": "522522",
+    "mpesa_account": "MamaFresh",
+    "hours": {
+      "weekdays": "Monday – Saturday: 6:00 AM – 7:00 PM",
+      "sunday": "Sunday: 7:00 AM – 2:00 PM"
+    }
+  },
+  "faqs": [
+    {
+      "id": 1,
+      "category": "ordering",
+      "question": "How do I place an order?",
+      "question_sw": "Ninaweza kuagiza vipi?",
+      "answer": "You can order in three ways: (1) WhatsApp us at +254 712 345 678, (2) call us during business hours, or (3) visit us in person at Stall 14, Gikomba Market. For bulk orders above KES 10,000 please give us 24 hours notice.",
+      "answer_sw": "Unaweza kuagiza kwa njia tatu: (1) Tuma WhatsApp kwa +254 712 345 678, (2) Piga simu wakati wa biashara, au (3) Tujie moja kwa moja Stall 14, Gikomba Market.",
+      "keywords": ["order", "agiza", "buy", "purchase", "nunua", "how", "jinsi"]
+    },
+    {
+      "id": 2,
+      "category": "delivery",
+      "question": "What areas do you deliver to?",
+      "question_sw": "Mnatuma kwa maeneo gani?",
+      "answer": "We deliver within Nairobi including Eastlands (Jogoo Rd, Kayole, Umoja), CBD, Westlands, South B & C, Langata, and Kasarani. Delivery is FREE for orders over KES 2,000. For orders below KES 2,000, a flat delivery fee of KES 150 applies. We do not yet deliver outside Nairobi, but you can collect from our Gikomba stall.",
+      "answer_sw": "Tunatuma ndani ya Nairobi: Eastlands, CBD, Westlands, South B na C, Langata, na Kasarani. Utoaji ni BURE kwa maagizo zaidi ya KES 2,000. Kwa maagizo chini ya KES 2,000, ada ya KES 150 inatumika.",
+      "keywords": ["delivery", "utoaji", "tuma", "deliver", "area", "eneo", "location", "Nairobi", "Westlands", "Eastlands"]
+    },
+    {
+      "id": 3,
+      "category": "payment",
+      "question": "What payment methods do you accept?",
+      "question_sw": "Mnakubali malipo gani?",
+      "answer": "We accept: (1) M-Pesa – Paybill 522522, Account: MamaFresh; (2) Cash – at our stall or on delivery; (3) Bank transfer – for wholesale orders above KES 20,000 (contact us for bank details). We do NOT accept cheques.",
+      "answer_sw": "Tunakubali: (1) M-Pesa – Paybill 522522, Akaunti: MamaFresh; (2) Pesa taslimu; (3) Uhamisho wa benki kwa maagizo makubwa ya zaidi ya KES 20,000.",
+      "keywords": ["payment", "malipo", "pay", "lipa", "mpesa", "M-Pesa", "cash", "bank", "how to pay"]
+    },
+    {
+      "id": 4,
+      "category": "freshness",
+      "question": "How fresh is your produce?",
+      "question_sw": "Mboga zenu ni mbichi kiasi gani?",
+      "answer": "Our produce arrives daily from Wakulima Market and directly from partner farms in Limuru, Kinangop (Nyandarua), and Molo. Most vegetables are harvested within 24–48 hours before reaching you. Leafy greens (sukuma wiki, spinach, managu) turn over daily. Root vegetables and onions may be 2–3 days post-harvest.",
+      "answer_sw": "Mboga zetu zinafika kila siku kutoka Soko la Wakulima na mashamba yetu washirika huko Limuru, Kinangop, na Molo. Mboga nyingi huvunwa ndani ya masaa 24–48 kabla ya kufika kwako.",
+      "keywords": ["fresh", "mbichi", "freshness", "quality", "ubora", "old", "harvested", "vunwa", "farm", "shamba"]
+    },
+    {
+      "id": 5,
+      "category": "wholesale",
+      "question": "Do you offer wholesale prices?",
+      "question_sw": "Mnaauza jumla?",
+      "answer": "Yes! We offer wholesale pricing for hotels, restaurants, schools, and bulk buyers. Orders above KES 5,000 get a 15% discount. For a regular wholesale account with fixed weekly pricing, please call or WhatsApp +254 712 345 678. Minimum wholesale order is KES 3,000.",
+      "answer_sw": "Ndiyo! Tunatoa bei za jumla kwa mahoteli, mikahawa, shule, na wanunuzi wakubwa. Maagizo zaidi ya KES 5,000 yanapata punguzo la 15%. Kwa akaunti ya kawaida ya jumla, wasiliana nasi.",
+      "keywords": ["wholesale", "jumla", "bulk", "hotel", "restaurant", "mkahawa", "discount", "punguzo", "business", "biashara"]
+    },
+    {
+      "id": 6,
+      "category": "subscriptions",
+      "question": "Do you offer weekly vegetable subscriptions?",
+      "question_sw": "Mna mpango wa mboga za kila wiki?",
+      "answer": "Yes! Our popular weekly baskets are: (1) Basic Basket (KES 700) – sukuma wiki, spinach, onions, tomatoes; (2) Family Basket (KES 1,200) – all of the above + carrots, cabbage, green pepper, dhania; (3) Premium Basket (KES 1,800) – all Family items + avocados, sweet peppers, courgettes. Delivery included for Nairobi. Subscribe via WhatsApp.",
+      "answer_sw": "Ndiyo! Vikapu vyetu vya kila wiki: (1) Kikapu cha Msingi (KES 700), (2) Kikapu cha Familia (KES 1,200), (3) Kikapu cha Premium (KES 1,800). Utoaji umejumuishwa Nairobi.",
+      "keywords": ["subscription", "mpango", "weekly", "kila wiki", "basket", "kikapu", "regular", "subscribe"]
+    },
+    {
+      "id": 7,
+      "category": "returns",
+      "question": "What if the produce is not fresh or I am unhappy?",
+      "question_sw": "Nifanye nini kama mboga si mbichi?",
+      "answer": "We have a freshness guarantee. If you receive produce that is not up to standard, contact us within 24 hours via WhatsApp (+254 712 345 678) with a photo. We will either replace the item on your next delivery or issue a full refund via M-Pesa. Your satisfaction is our priority.",
+      "answer_sw": "Tuna dhamana ya ubichi. Kama umepokea mboga zisizo na ubora, wasiliana nasi ndani ya masaa 24 kupitia WhatsApp na picha. Tutabadilisha bidhaa au kurejesha pesa yako kamili kwa M-Pesa.",
+      "keywords": ["return", "refund", "unhappy", "problem", "tatizo", "bad", "mbaya", "replace", "badilisha", "guarantee", "dhamana"]
+    },
+    {
+      "id": 8,
+      "category": "contact",
+      "question": "How can I contact Mama Mboga Fresh Supplies?",
+      "question_sw": "Ninawezaje kuwasiliana nanyi?",
+      "answer": "You can reach us via: Phone/WhatsApp: +254 712 345 678 | Email: orders@mamambogafresh.co.ke | In person: Stall 14, Gikomba Market, Nairobi | Business hours: Mon–Sat 6 AM–7 PM, Sun 7 AM–2 PM.",
+      "answer_sw": "Unaweza kutufikia kwa: Simu/WhatsApp: +254 712 345 678 | Barua pepe: orders@mamambogafresh.co.ke | Uso kwa uso: Stall 14, Soko la Gikomba.",
+      "keywords": ["contact", "wasiliana", "phone", "simu", "email", "barua pepe", "address", "anwani", "reach", "find"]
+    },
+    {
+      "id": 9,
+      "category": "seasonal",
+      "question": "Do you sell mangoes and avocados all year?",
+      "question_sw": "Mnaauza maembe na parachichi mwaka wote?",
+      "answer": "Avocados (parachichi) are available most of the year from farms in Muranga and Kiambu, but peak season is March–June. Mangoes (maembe) are seasonal – peak season is October–December (Mombasa/Coast mangoes) and January–March (Embu/Meru mangoes). Outside season we may have limited stock or they may not be available. Ask us via WhatsApp for today's availability.",
+      "answer_sw": "Parachichi zinapatikana mwaka mwingi, lakini msimu mkuu ni Machi–Juni. Maembe ni ya msimu – Oktoba–Desemba (Pwani) na Januari–Machi (Embu/Meru). Uliza via WhatsApp kwa upatikanaji wa leo.",
+      "keywords": ["mango", "embe", "avocado", "parachichi", "seasonal", "msimu", "available", "patikana", "year", "mwaka"]
+    },
+    {
+      "id": 10,
+      "category": "ordering",
+      "question": "What is the minimum order amount?",
+      "question_sw": "Kiwango cha chini cha agizo ni nini?",
+      "answer": "There is no minimum order for in-person purchases at our stall. For delivery orders, the minimum is KES 500. For wholesale (discounted) pricing, the minimum order is KES 3,000.",
+      "answer_sw": "Hakuna kiwango cha chini kwa ununuzi wa moja kwa moja. Kwa maagizo ya utoaji, kiwango cha chini ni KES 500. Kwa bei za jumla, kiwango cha chini ni KES 3,000.",
+      "keywords": ["minimum", "kiwango cha chini", "minimum order", "kiwango", "least", "small order", "500"]
+    }
+  ]
+}

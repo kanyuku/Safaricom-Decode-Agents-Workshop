@@ -1,0 +1,147 @@
+{
+  "date": "2026-03-16",
+  "currency": "KES",
+  "note": "Wholesale market prices from Wakulima Market (Nairobi CBD) and Gikomba Market. These are indicative reference prices for traders — actual prices vary daily based on supply, weather, and season. Mama Mboga uses these to price her retail stock.",
+  "markets": [
+    {
+      "id": "wakulima",
+      "name": "Wakulima Market",
+      "name_full": "Nairobi City Market (Wakulima)",
+      "location": "Haile Selassie Avenue, Nairobi CBD",
+      "type": "Wholesale / Semi-wholesale",
+      "trading_hours": "24 hours (busiest 3 AM – 9 AM)"
+    },
+    {
+      "id": "gikomba",
+      "name": "Gikomba Market",
+      "name_full": "Gikomba Open Air Market",
+      "location": "Gikomba, Nairobi East",
+      "type": "Wholesale and Retail",
+      "trading_hours": "5 AM – 8 PM"
+    }
+  ],
+  "prices": [
+    {
+      "name_en": "Sukuma Wiki (Kale)",
+      "name_sw": "Sukuma Wiki",
+      "category": "Leafy Vegetables",
+      "wholesale_price": 300,
+      "unit": "bag (≈30 bunches)",
+      "price_per_bunch_implied": 10,
+      "market": "Wakulima",
+      "trend": "stable",
+      "notes": "High supply from Kinangop. Prices drop after rains when harvests peak."
+    },
+    {
+      "name_en": "Spinach",
+      "name_sw": "Mchicha",
+      "category": "Leafy Vegetables",
+      "wholesale_price": 400,
+      "unit": "bag (≈20 bunches)",
+      "price_per_bunch_implied": 20,
+      "market": "Wakulima",
+      "trend": "stable",
+      "notes": "Limuru farms supply most of Nairobi. Consistent availability year-round."
+    },
+    {
+      "name_en": "Tomatoes",
+      "name_sw": "Nyanya",
+      "category": "Vegetables",
+      "wholesale_price": 3500,
+      "unit": "crate (≈80 kg)",
+      "price_per_kg_implied": 44,
+      "market": "Wakulima",
+      "trend": "rising",
+      "notes": "Prices rising due to dry season in Mwea. Expect KES 50–60/kg retail by end of month."
+    },
+    {
+      "name_en": "Red Onions",
+      "name_sw": "Vitunguu Maji",
+      "category": "Vegetables",
+      "wholesale_price": 5500,
+      "unit": "bag (≈80 kg)",
+      "price_per_kg_implied": 69,
+      "market": "Wakulima",
+      "trend": "falling",
+      "notes": "New season onions arriving from Rongai and Karatina. Prices expected to fall."
+    },
+    {
+      "name_en": "Carrots",
+      "name_sw": "Karoti",
+      "category": "Vegetables",
+      "wholesale_price": 3000,
+      "unit": "bag (≈60 kg)",
+      "price_per_kg_implied": 50,
+      "market": "Gikomba",
+      "trend": "stable",
+      "notes": "Good supply from Limuru/Tigoni farms. Stable prices expected through April."
+    },
+    {
+      "name_en": "Cabbage",
+      "name_sw": "Kabichi",
+      "category": "Leafy Vegetables",
+      "wholesale_price": 2000,
+      "unit": "bag (≈40 heads)",
+      "price_per_head_implied": 50,
+      "market": "Wakulima",
+      "trend": "stable",
+      "notes": "Molo and Elburgon supply strong. Retail price stable at KES 60–70 per head."
+    },
+    {
+      "name_en": "Avocado (Hass)",
+      "name_sw": "Parachichi (Hass)",
+      "category": "Fruits",
+      "wholesale_price": 1800,
+      "unit": "bag (≈80 pieces)",
+      "price_per_piece_implied": 23,
+      "market": "Gikomba",
+      "trend": "rising",
+      "notes": "Early season avocados from Murang'a arriving. Prices will drop by end of March as peak season (Mar–Jun) kicks in fully."
+    },
+    {
+      "name_en": "Mango (Kent)",
+      "name_sw": "Embe (Kent)",
+      "category": "Fruits",
+      "wholesale_price": 2500,
+      "unit": "crate (≈70 pieces)",
+      "price_per_piece_implied": 36,
+      "market": "Gikomba",
+      "trend": "falling",
+      "notes": "End of Embu/Meru mango season. Prices dropping. Limited stock expected after April."
+    },
+    {
+      "name_en": "Banana (Sweet)",
+      "name_sw": "Ndizi Tamu",
+      "category": "Fruits",
+      "wholesale_price": 800,
+      "unit": "bunch (≈100 fingers)",
+      "price_per_finger_implied": 8,
+      "market": "Gikomba",
+      "trend": "stable",
+      "notes": "Year-round supply from Kisii. Very stable."
+    },
+    {
+      "name_en": "Coriander (Dhania)",
+      "name_sw": "Dhania",
+      "category": "Herbs",
+      "wholesale_price": 200,
+      "unit": "bundle (≈25 bunches)",
+      "price_per_bunch_implied": 8,
+      "market": "Gikomba",
+      "trend": "stable",
+      "notes": "Peri-urban Nairobi farms supply consistently. Small margins for traders."
+    },
+    {
+      "name_en": "Green Pepper",
+      "name_sw": "Pilipili Hoho",
+      "category": "Vegetables",
+      "wholesale_price": 4000,
+      "unit": "crate (≈250 pieces)",
+      "price_per_piece_implied": 16,
+      "market": "Wakulima",
+      "trend": "stable",
+      "notes": "Thika and Ruiru greenhouses supply most of the market year-round."
+    }
+  ],
+  "analyst_notes": "March 2026 overview: The long rains season (March–May) typically increases supply of leafy greens, softening prices. Tomato prices remain elevated due to late short rains. Avocado season starting — good opportunity for traders to stock up. Overall market conditions are moderate; no major supply shocks expected."
+}

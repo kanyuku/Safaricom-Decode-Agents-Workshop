@@ -1,0 +1,274 @@
+{
+  "business": "Mama Mboga Fresh Supplies",
+  "currency": "KES",
+  "last_updated": "2026-03-16",
+  "note": "Prices are retail (duka/stall) prices. Prices may vary slightly by season. All units are per piece or per bunch unless otherwise stated.",
+  "categories": [
+    {
+      "name": "Leafy Vegetables",
+      "name_sw": "Mboga za Majani",
+      "products": [
+        {
+          "sku": "VEG-001",
+          "name_en": "Sukuma Wiki (Kale)",
+          "name_sw": "Sukuma Wiki",
+          "description": "Dark green leafy kale, grown in Kinangop. Excellent source of iron and vitamins.",
+          "price": 10,
+          "unit": "bunch",
+          "weight_approx_g": 300,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Kinangop, Nyandarua"
+        },
+        {
+          "sku": "VEG-002",
+          "name_en": "Spinach",
+          "name_sw": "Mchicha",
+          "description": "Tender baby spinach leaves, ideal for stews and salads.",
+          "price": 20,
+          "unit": "bunch",
+          "weight_approx_g": 250,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Limuru, Kiambu"
+        },
+        {
+          "sku": "VEG-003",
+          "name_en": "African Nightshade",
+          "name_sw": "Managu",
+          "description": "Traditional leafy green, rich in nutrients. Popular in western Kenya cuisine.",
+          "price": 15,
+          "unit": "bunch",
+          "weight_approx_g": 200,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Kisii / Kericho farms"
+        },
+        {
+          "sku": "VEG-004",
+          "name_en": "Amaranth",
+          "name_sw": "Terere",
+          "description": "Nutritious traditional green, mild flavour.",
+          "price": 15,
+          "unit": "bunch",
+          "weight_approx_g": 200,
+          "in_stock": true,
+          "seasonal": true,
+          "origin": "Murang'a"
+        },
+        {
+          "sku": "VEG-005",
+          "name_en": "Cabbage",
+          "name_sw": "Kabichi",
+          "description": "Large firm cabbage heads, great for stews and salads.",
+          "price": 60,
+          "unit": "head",
+          "weight_approx_g": 1200,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Molo, Nakuru"
+        }
+      ]
+    },
+    {
+      "name": "Vegetables",
+      "name_sw": "Mboga",
+      "products": [
+        {
+          "sku": "VEG-006",
+          "name_en": "Tomatoes",
+          "name_sw": "Nyanya",
+          "description": "Ripe red tomatoes, ideal for sauces, stews, and salads.",
+          "price": 50,
+          "unit": "kg",
+          "weight_approx_g": 1000,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Mwea / Kirinyaga"
+        },
+        {
+          "sku": "VEG-007",
+          "name_en": "Onions (Red)",
+          "name_sw": "Vitunguu Maji (Nyekundu)",
+          "description": "Medium-sized red onions with strong flavour. Essential kitchen staple.",
+          "price": 80,
+          "unit": "kg",
+          "weight_approx_g": 1000,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Rongai, Nakuru"
+        },
+        {
+          "sku": "VEG-008",
+          "name_en": "Carrots",
+          "name_sw": "Karoti",
+          "description": "Fresh orange carrots, sweet and crunchy.",
+          "price": 60,
+          "unit": "kg",
+          "weight_approx_g": 1000,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Limuru / Tigoni"
+        },
+        {
+          "sku": "VEG-009",
+          "name_en": "Green Pepper (Capsicum)",
+          "name_sw": "Pilipili Hoho (Kijani)",
+          "description": "Mild green bell pepper, great for stir-fries and salads.",
+          "price": 20,
+          "unit": "piece",
+          "weight_approx_g": 120,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Thika / Ruiru"
+        },
+        {
+          "sku": "VEG-010",
+          "name_en": "Garlic",
+          "name_sw": "Kitunguu Saumu",
+          "description": "Whole garlic bulbs, aromatic and flavourful.",
+          "price": 30,
+          "unit": "bulb (3 cloves)",
+          "weight_approx_g": 50,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Meru"
+        },
+        {
+          "sku": "VEG-011",
+          "name_en": "Courgette (Zucchini)",
+          "name_sw": "Boga",
+          "description": "Tender courgettes, mild flavour.",
+          "price": 40,
+          "unit": "piece",
+          "weight_approx_g": 250,
+          "in_stock": false,
+          "seasonal": true,
+          "origin": "Limuru"
+        },
+        {
+          "sku": "VEG-012",
+          "name_en": "Ginger",
+          "name_sw": "Tangawizi",
+          "description": "Fresh ginger root for cooking and chai.",
+          "price": 20,
+          "unit": "piece (~50g)",
+          "weight_approx_g": 50,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Coastal Kenya / Tanzania"
+        }
+      ]
+    },
+    {
+      "name": "Fruits",
+      "name_sw": "Matunda",
+      "products": [
+        {
+          "sku": "FRT-001",
+          "name_en": "Avocado (Hass)",
+          "name_sw": "Parachichi (Hass)",
+          "description": "Creamy Hass avocado, rich in healthy fats. Peak season Mar–Jun.",
+          "price": 30,
+          "unit": "piece",
+          "weight_approx_g": 200,
+          "in_stock": true,
+          "seasonal": true,
+          "peak_season": "March–June",
+          "origin": "Muranga / Kiambu"
+        },
+        {
+          "sku": "FRT-002",
+          "name_en": "Banana (Cooking / Matoke)",
+          "name_sw": "Ndizi (Matoke)",
+          "description": "Green cooking bananas for ugali accompaniment or stew.",
+          "price": 80,
+          "unit": "bunch (~8 fingers)",
+          "weight_approx_g": 600,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Kisii / Mt. Elgon"
+        },
+        {
+          "sku": "FRT-003",
+          "name_en": "Banana (Sweet / Cavendish)",
+          "name_sw": "Ndizi Tamu",
+          "description": "Ripe sweet bananas for eating fresh.",
+          "price": 10,
+          "unit": "piece",
+          "weight_approx_g": 120,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Kisii"
+        },
+        {
+          "sku": "FRT-004",
+          "name_en": "Mango (Kent)",
+          "name_sw": "Embe (Kent)",
+          "description": "Juicy Kent mango. Best Jan–Mar from Embu farms.",
+          "price": 40,
+          "unit": "piece",
+          "weight_approx_g": 400,
+          "in_stock": true,
+          "seasonal": true,
+          "peak_season": "January–March (Embu/Meru), October–December (Mombasa)",
+          "origin": "Embu / Meru"
+        },
+        {
+          "sku": "FRT-005",
+          "name_en": "Passion Fruit",
+          "name_sw": "Passiflora / Matunda ya Tamu",
+          "description": "Purple passion fruit, sweet and tangy. Great for juicing.",
+          "price": 10,
+          "unit": "piece",
+          "weight_approx_g": 80,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Kiambu / Murang'a"
+        }
+      ]
+    },
+    {
+      "name": "Herbs & Spices",
+      "name_sw": "Viungo na Mimea",
+      "products": [
+        {
+          "sku": "HRB-001",
+          "name_en": "Coriander (Dhania)",
+          "name_sw": "Dhania",
+          "description": "Fresh coriander herb, essential for garnishing stews and pilau.",
+          "price": 10,
+          "unit": "bunch",
+          "weight_approx_g": 50,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Nairobi peri-urban farms"
+        },
+        {
+          "sku": "HRB-002",
+          "name_en": "Spring Onions (Scallions)",
+          "name_sw": "Vitunguu Maji Mabichi",
+          "description": "Fresh spring onions with green tops.",
+          "price": 10,
+          "unit": "bunch",
+          "weight_approx_g": 100,
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Limuru"
+        },
+        {
+          "sku": "HRB-003",
+          "name_en": "Lemon Grass",
+          "name_sw": "Mchaichai",
+          "description": "Aromatic lemongrass for tea and cooking.",
+          "price": 20,
+          "unit": "bunch",
+          "weight_approx_g": 150,
+          "in_stock": false,
+          "seasonal": true,
+          "origin": "Coastal Kenya"
+        }
+      ]
+    }
+  ]
+}
