@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biashara Bot — Savanna Bites</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f4f0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        #app-wrapper {
+            width: 100%;
+            max-width: 520px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background: #f8faf8;
+            box-shadow: 0 0 24px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #2e7d4f, #5b3a8c);
+            color: white;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        header .brand .logo { font-size: 28px; }
+
+        header h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        header .subtitle {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+
+        #reset-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: background 0.2s;
+        }
+
+        #reset-btn:hover { background: rgba(255,255,255,0.35); }
+
+        #chat-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .message {
+            max-width: 82%;
+            padding: 12px 16px;
+            border-radius: 16px;
+            line-height: 1.5;
+            font-size: 14px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        .message.user {
+            align-self: flex-end;
+            background: #7b2fbf;
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .message.assistant {
+            align-self: flex-start;
+            background: white;
+            color: #333;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .message.assistant .msg-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #2e7d4f;
+            margin-bottom: 4px;
+        }
+
+        .message.welcome {
+            align-self: center;
+            background: #f4f0fa;
+            border: 1px dashed #a88bc7;
+            color: #4a2d6b;
+            text-align: center;
+            max-width: 420px;
+            border-radius: 12px;
+        }
+
+        #input-area {
+            padding: 14px 20px;
+            background: white;
+            border-top: 1px solid #dde6dd;
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        #message-input {
+            flex: 1;
+            border: 1px solid #c8d4c8;
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: none;
+            max-height: 120px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        #message-input:focus { border-color: #5b3a8c; }
+
+        #send-btn {
+            background: #2e7d4f;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        #send-btn:hover { background: #236b40; }
+        #send-btn:disabled { background: #8db9a0; cursor: not-allowed; }
+
+        .typing-indicator {
+            align-self: flex-start;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 16px;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            display: none;
+        }
+
+        .typing-indicator.visible { display: flex; gap: 4px; align-items: center; }
+
+        .typing-indicator span {
+            width: 8px;
+            height: 8px;
+            background: #a88bc7;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out;
+        }
+
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            #app-wrapper { max-width: 100%; }
+            .message { max-width: 88%; }
+            header h1 { font-size: 17px; }
+            #input-area { padding: 12px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="app-wrapper">
+    <header>
+        <div class="brand">
+            <span class="logo">🍽️</span>
+            <div>
+                <h1>Biashara Bot</h1>
+                <div class="subtitle">Savanna Bites Restaurant — Nairobi CBD</div>
+            </div>
+        </div>
+        <button id="reset-btn" onclick="resetChat()">New Chat</button>
+    </header>
+
+    <div id="chat-container">
+        <div class="message welcome">
+            <strong>Karibu! Welcome to Savanna Bites 🍽️</strong><br>
+            Ask me about our menu, prices, delivery, or anything else.<br>
+            <em>Niulize kuhusu menyu, bei, utoaji, au chochote kingine!</em>
+        </div>
+    </div>
+
+    <div class="typing-indicator" id="typing">
+        <span></span><span></span><span></span>
+    </div>
+
+    <div id="input-area">
+        <textarea id="message-input"
+                  placeholder="Type a message… / Andika ujumbe…"
+                  rows="1"
+                  autofocus></textarea>
+        <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+    </div>
+
+    <script>
+        let sessionId = crypto.randomUUID();
+        const chatContainer = document.getElementById('chat-container');
+        const input = document.getElementById('message-input');
+        const sendBtn = document.getElementById('send-btn');
+        const typing = document.getElementById('typing');
+
+        // Auto-resize textarea
+        input.addEventListener('input', () => {
+            input.style.height = 'auto';
+            input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+        });
+
+        // Send on Enter (Shift+Enter for newline)
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        function addMessage(text, role) {
+            const div = document.createElement('div');
+            div.className = `message ${role}`;
+            if (role === 'assistant') {
+                div.innerHTML = `<div class="msg-label">Biashara Bot</div>${escapeHtml(text)}`;
+            } else {
+                div.textContent = text;
+            }
+            chatContainer.appendChild(div);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        async function sendMessage() {
+            const text = input.value.trim();
+            if (!text) return;
+
+            addMessage(text, 'user');
+            input.value = '';
+            input.style.height = 'auto';
+            sendBtn.disabled = true;
+            typing.classList.add('visible');
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text, session_id: sessionId }),
+                });
+                const data = await res.json();
+                if (data.error) {
+                    addMessage(`Error: ${data.error}`, 'assistant');
+                } else {
+                    sessionId = data.session_id;
+                    addMessage(data.response, 'assistant');
+                }
+            } catch (err) {
+                addMessage('Connection error. Is the server running?', 'assistant');
+            } finally {
+                typing.classList.remove('visible');
+                sendBtn.disabled = false;
+                input.focus();
+            }
+        }
+
+        async function resetChat() {
+            await fetch('/api/reset', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ session_id: sessionId }),
+            });
+            sessionId = crypto.randomUUID();
+            chatContainer.innerHTML = `
+                <div class="message welcome">
+                    <strong>Karibu! Welcome to Savanna Bites 🍽️</strong><br>
+                    Ask me about our menu, prices, delivery, or anything else.<br>
+                    <em>Niulize kuhusu menyu, bei, utoaji, au chochote kingine!</em>
+                </div>`;
+        }
+    </script>
+</body>
+</html>
