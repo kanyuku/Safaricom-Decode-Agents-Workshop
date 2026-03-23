@@ -1,7 +1,7 @@
 {
   "date": "2026-03-16",
   "currency": "KES",
-  "note": "Wholesale market prices from Wakulima Market (Nairobi CBD) and Gikomba Market. These are indicative reference prices for traders — actual prices vary daily based on supply, weather, and season. Mama Mboga uses these to price her retail stock.",
+  "note": "Wholesale ingredient prices from Wakulima Market and Gikomba Market, Nairobi. These are reference prices for restaurant operators — actual prices vary daily based on supply and season. Savanna Bites uses these to manage food costs.",
   "markets": [
     {
       "id": "wakulima",
@@ -22,126 +22,131 @@
   ],
   "prices": [
     {
-      "name_en": "Sukuma Wiki (Kale)",
-      "name_sw": "Sukuma Wiki",
-      "category": "Leafy Vegetables",
-      "wholesale_price": 300,
-      "unit": "bag (≈30 bunches)",
-      "price_per_bunch_implied": 10,
-      "market": "Wakulima",
+      "name_en": "Beef (Bone-in)",
+      "name_sw": "Nyama ya Ng'ombe",
+      "category": "Meat",
+      "wholesale_price": 650,
+      "unit": "kg",
+      "market": "Gikomba",
       "trend": "stable",
-      "notes": "High supply from Kinangop. Prices drop after rains when harvests peak."
+      "notes": "Stable supply from Laikipia and Athi River. Expect slight rises during Easter season."
     },
     {
-      "name_en": "Spinach",
-      "name_sw": "Mchicha",
-      "category": "Leafy Vegetables",
-      "wholesale_price": 400,
-      "unit": "bag (≈20 bunches)",
-      "price_per_bunch_implied": 20,
-      "market": "Wakulima",
+      "name_en": "Chicken (Whole, Free-range)",
+      "name_sw": "Kuku (Kienyeji)",
+      "category": "Meat",
+      "wholesale_price": 800,
+      "unit": "whole bird (~1.5 kg)",
+      "market": "Gikomba",
+      "trend": "rising",
+      "notes": "Free-range supply tight due to demand from hotels. Broiler alternative at KES 450 per bird."
+    },
+    {
+      "name_en": "Tilapia (Whole, Fresh)",
+      "name_sw": "Sato/Ngege",
+      "category": "Fish",
+      "wholesale_price": 450,
+      "unit": "kg",
+      "market": "Gikomba",
       "trend": "stable",
-      "notes": "Limuru farms supply most of Nairobi. Consistent availability year-round."
+      "notes": "Good Lake Victoria supply. Farm-raised from Kisumu also available at KES 400/kg."
     },
     {
       "name_en": "Tomatoes",
       "name_sw": "Nyanya",
       "category": "Vegetables",
       "wholesale_price": 3500,
-      "unit": "crate (≈80 kg)",
+      "unit": "crate (~80 kg)",
       "price_per_kg_implied": 44,
       "market": "Wakulima",
       "trend": "rising",
-      "notes": "Prices rising due to dry season in Mwea. Expect KES 50–60/kg retail by end of month."
+      "notes": "Prices rising due to dry season in Mwea. Expect KES 50-60/kg retail by end of month."
     },
     {
       "name_en": "Red Onions",
       "name_sw": "Vitunguu Maji",
       "category": "Vegetables",
       "wholesale_price": 5500,
-      "unit": "bag (≈80 kg)",
+      "unit": "bag (~80 kg)",
       "price_per_kg_implied": 69,
       "market": "Wakulima",
       "trend": "falling",
       "notes": "New season onions arriving from Rongai and Karatina. Prices expected to fall."
     },
     {
-      "name_en": "Carrots",
-      "name_sw": "Karoti",
+      "name_en": "Potatoes",
+      "name_sw": "Viazi",
       "category": "Vegetables",
       "wholesale_price": 3000,
-      "unit": "bag (≈60 kg)",
-      "price_per_kg_implied": 50,
-      "market": "Gikomba",
-      "trend": "stable",
-      "notes": "Good supply from Limuru/Tigoni farms. Stable prices expected through April."
-    },
-    {
-      "name_en": "Cabbage",
-      "name_sw": "Kabichi",
-      "category": "Leafy Vegetables",
-      "wholesale_price": 2000,
-      "unit": "bag (≈40 heads)",
-      "price_per_head_implied": 50,
+      "unit": "bag (~110 kg)",
+      "price_per_kg_implied": 27,
       "market": "Wakulima",
       "trend": "stable",
-      "notes": "Molo and Elburgon supply strong. Retail price stable at KES 60–70 per head."
+      "notes": "Strong Nyandarua harvests. Critical ingredient for chips — stable through April."
+    },
+    {
+      "name_en": "Cooking Oil (Vegetable)",
+      "name_sw": "Mafuta ya Kupikia",
+      "category": "Dry Goods",
+      "wholesale_price": 3200,
+      "unit": "20-litre jerrycan",
+      "market": "Gikomba",
+      "trend": "falling",
+      "notes": "Palm oil prices dropping globally. Good time to stock up for deep-frying."
+    },
+    {
+      "name_en": "Wheat Flour",
+      "name_sw": "Unga wa Ngano",
+      "category": "Dry Goods",
+      "wholesale_price": 180,
+      "unit": "2 kg pack",
+      "market": "Gikomba",
+      "trend": "stable",
+      "notes": "Government subsidy still in effect. Key for chapati and mandazi production."
+    },
+    {
+      "name_en": "Maize Flour (Sifted)",
+      "name_sw": "Unga wa Mahindi",
+      "category": "Dry Goods",
+      "wholesale_price": 150,
+      "unit": "2 kg pack",
+      "market": "Gikomba",
+      "trend": "stable",
+      "notes": "Subsidised. Essential for ugali — the staple for most lunch plates."
+    },
+    {
+      "name_en": "Rice (Pishori)",
+      "name_sw": "Mchele wa Pishori",
+      "category": "Dry Goods",
+      "wholesale_price": 7500,
+      "unit": "50 kg bag",
+      "price_per_kg_implied": 150,
+      "market": "Gikomba",
+      "trend": "rising",
+      "notes": "Mwea Pishori premium rising. Pakistan Basmati alternative at KES 5,500/50kg."
+    },
+    {
+      "name_en": "Sukuma Wiki (Kale)",
+      "name_sw": "Sukuma Wiki",
+      "category": "Vegetables",
+      "wholesale_price": 300,
+      "unit": "bag (~30 bunches)",
+      "price_per_bunch_implied": 10,
+      "market": "Wakulima",
+      "trend": "stable",
+      "notes": "High supply from Kinangop. Key side dish for lunch plates."
     },
     {
       "name_en": "Avocado (Hass)",
-      "name_sw": "Parachichi (Hass)",
+      "name_sw": "Parachichi",
       "category": "Fruits",
       "wholesale_price": 1800,
-      "unit": "bag (≈80 pieces)",
+      "unit": "bag (~80 pieces)",
       "price_per_piece_implied": 23,
       "market": "Gikomba",
       "trend": "rising",
-      "notes": "Early season avocados from Murang'a arriving. Prices will drop by end of March as peak season (Mar–Jun) kicks in fully."
-    },
-    {
-      "name_en": "Mango (Kent)",
-      "name_sw": "Embe (Kent)",
-      "category": "Fruits",
-      "wholesale_price": 2500,
-      "unit": "crate (≈70 pieces)",
-      "price_per_piece_implied": 36,
-      "market": "Gikomba",
-      "trend": "falling",
-      "notes": "End of Embu/Meru mango season. Prices dropping. Limited stock expected after April."
-    },
-    {
-      "name_en": "Banana (Sweet)",
-      "name_sw": "Ndizi Tamu",
-      "category": "Fruits",
-      "wholesale_price": 800,
-      "unit": "bunch (≈100 fingers)",
-      "price_per_finger_implied": 8,
-      "market": "Gikomba",
-      "trend": "stable",
-      "notes": "Year-round supply from Kisii. Very stable."
-    },
-    {
-      "name_en": "Coriander (Dhania)",
-      "name_sw": "Dhania",
-      "category": "Herbs",
-      "wholesale_price": 200,
-      "unit": "bundle (≈25 bunches)",
-      "price_per_bunch_implied": 8,
-      "market": "Gikomba",
-      "trend": "stable",
-      "notes": "Peri-urban Nairobi farms supply consistently. Small margins for traders."
-    },
-    {
-      "name_en": "Green Pepper",
-      "name_sw": "Pilipili Hoho",
-      "category": "Vegetables",
-      "wholesale_price": 4000,
-      "unit": "crate (≈250 pieces)",
-      "price_per_piece_implied": 16,
-      "market": "Wakulima",
-      "trend": "stable",
-      "notes": "Thika and Ruiru greenhouses supply most of the market year-round."
+      "notes": "Early season from Murang'a. Prices will drop by end of March as peak season kicks in."
     }
   ],
-  "analyst_notes": "March 2026 overview: The long rains season (March–May) typically increases supply of leafy greens, softening prices. Tomato prices remain elevated due to late short rains. Avocado season starting — good opportunity for traders to stock up. Overall market conditions are moderate; no major supply shocks expected."
+  "analyst_notes": "March 2026: Restaurant operators should watch tomato and chicken costs closely — both trending up. Offset by falling onion and cooking oil prices. Potato and flour stable — chips and ugali margins hold. Pishori rice is premium; consider Basmati alternatives for pilau if margins thin."
 }

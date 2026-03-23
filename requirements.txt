@@ -4,3 +4,6 @@
 # MCP (Model Context Protocol) SDK — powers the local data server
 # Includes the FastMCP high-level API and CLI utilities
 mcp[cli]>=1.0.0
+
+# Pydantic — used for typed tool parameter descriptions
+pydantic>=2.0.0

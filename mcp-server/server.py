@@ -1,16 +1,23 @@
 """
-Mama Mboga Fresh Supplies — Biashara Bot MCP Data Server
-=========================================================
+Savanna Bites Restaurant — Biashara Bot MCP Data Server
+=======================================================
 A FastMCP server that exposes business data for the Biashara Bot AI agent.
 Participants: you do NOT need to edit this file during the workshop.
 Just run it, then configure your AI Toolkit agent to use it.
 
-Run: python mcp-server/server.py
+Supports two transport modes:
+  stdio: python mcp-server/server.py --stdio   (used by AI Toolkit Agent Builder)
+  http:  python mcp-server/server.py            (runs at http://127.0.0.1:8000/mcp)
 """
 
+import argparse
+import asyncio
 import json
 import os
+from typing import Annotated
+
 from mcp.server.fastmcp import FastMCP
+from pydantic import Field
 
 # ------------------------------------------------------------------
 # Server initialisation
@@ -30,24 +37,21 @@ def _load(filename: str) -> dict:
 # Tool 1 — Business FAQs
 # ------------------------------------------------------------------
 @mcp.tool()
-def search_business_faqs(query: str) -> str:
-    """
-    Search Mama Mboga Fresh Supplies FAQs.
+def search_business_faqs(
+    query: Annotated[str, Field(description="The customer's question or keywords to search for.")],
+) -> str:
+    """Search Savanna Bites Restaurant FAQs.
 
     Use this tool to answer questions about:
     - Delivery areas and fees
-    - How to place an order
-    - Payment methods (M-Pesa, cash)
-    - Business hours
-    - Freshness guarantee and returns
-    - Wholesale and subscription options
+    - How to place an order (walk-in, WhatsApp, delivery apps)
+    - Payment methods (M-Pesa, cash, card)
+    - Opening hours and meal times
+    - Catering and event orders
+    - Dietary options and allergies
+    - Loyalty programme and reservations
+    - Complaints and refunds
     - Contact details
-
-    Args:
-        query: The customer's question or keywords to search for.
-
-    Returns:
-        Matching FAQ entries in English and Swahili, or a not-found message.
     """
     data = _load("business-faqs.json")
     query_words = query.lower().split()
@@ -73,7 +77,7 @@ def search_business_faqs(query: str) -> str:
         return (
             "Hakuna majibu yaliyopatikana kwa swali hilo.\n"
             "No FAQs matched your query. Try keywords like: "
-            "delivery, payment, order, wholesale, fresh, contact, hours."
+            "delivery, payment, order, menu, contact, hours."
         )
 
     business = data["business"]
@@ -91,23 +95,19 @@ def search_business_faqs(query: str) -> str:
 # Tool 2 — Product Catalogue
 # ------------------------------------------------------------------
 @mcp.tool()
-def get_product_catalogue(category: str = "all") -> str:
-    """
-    Get the current product catalogue and retail prices for Mama Mboga Fresh Supplies.
+def get_product_catalogue(
+    category: Annotated[str, Field(
+        description="Filter by category. Options: 'breakfast', 'lunch', 'snacks', 'drinks', or 'all' (default)."
+    )] = "all",
+) -> str:
+    """Get the current menu and prices for Savanna Bites Restaurant.
 
     Use this tool to answer questions about:
-    - What produce is available today
-    - Current retail prices (in KES)
-    - Whether a product is in stock
-    - Whether a product is seasonal
-    - Where the produce comes from (farm origin)
-
-    Args:
-        category: Filter by category. Options: "vegetables", "leafy vegetables",
-                  "fruits", "herbs", or "all" (default).
-
-    Returns:
-        A formatted list of products with names (English & Swahili), prices, and stock status.
+    - What meals and snacks are available
+    - Current prices (in KES)
+    - Whether an item is in stock
+    - Whether an item is seasonal
+    - Meal descriptions and ingredients
     """
     data = _load("product-catalogue.json")
     lines = [
@@ -140,145 +140,28 @@ def get_product_catalogue(category: str = "all") -> str:
 
 
 # ------------------------------------------------------------------
-# Tool 3 — Nairobi Wholesale Market Prices
-# ------------------------------------------------------------------
-@mcp.tool()
-def get_market_prices(produce_name: str = "all") -> str:
-    """
-    Get current Nairobi wholesale market reference prices from Wakulima and Gikomba markets.
-
-    Use this tool to:
-    - Help customers understand general market price context
-    - Compare Mama Mboga's retail prices against wholesale benchmarks
-    - Explain seasonal price trends (rising, falling, stable)
-
-    Args:
-        produce_name: Name of the produce to look up (English or Swahili),
-                      or "all" to return everything.
-
-    Returns:
-        Wholesale price data with trend indicators and market analyst notes.
-    """
-    data = _load("market-prices.json")
-    prices = data["prices"]
-
-    if produce_name != "all":
-        prices = [
-            p for p in prices
-            if produce_name.lower() in p["name_en"].lower()
-            or produce_name.lower() in p["name_sw"].lower()
-        ]
-
-    if not prices:
-        names = [p["name_en"] for p in data["prices"]]
-        return (
-            f"No market price data found for '{produce_name}'.\n"
-            f"Available items: {', '.join(names)}"
-        )
-
-    trend_icon = {"rising": "↑", "falling": "↓", "stable": "→"}
-
-    lines = [
-        f"Nairobi Wholesale Market Prices ({data['date']})",
-        f"Source: {', '.join(m['name'] for m in data['markets'])}",
-        f"Note: {data['note']}",
-        "=" * 50,
-    ]
-
-    for p in prices:
-        icon = trend_icon.get(p.get("trend", "stable"), "→")
-        lines.append(
-            f"\n{p['name_en']} / {p['name_sw']} [{p['market']}]"
-            f"\n  Wholesale: KES {p['wholesale_price']} per {p['unit']}"
-            f"\n  Trend: {icon} {p.get('trend', 'stable').upper()}"
-            f"\n  Notes: {p.get('notes', '')}"
-        )
-
-    lines.append(f"\n{'=' * 50}")
-    lines.append(f"Analyst Overview: {data['analyst_notes']}")
-    return "\n".join(lines)
-
-
-# ------------------------------------------------------------------
-# Tool 4 — Kenya Tax & Business Compliance Info
-# ------------------------------------------------------------------
-@mcp.tool()
-def get_tax_info(topic: str = "all") -> str:
-    """
-    Get Kenya tax and business compliance information for small businesses (MSMEs).
-
-    Use this tool for general educational information about:
-    - KRA PIN registration
-    - iTax portal and filing returns
-    - VAT (threshold: KES 5 million, fresh produce is exempt)
-    - Income tax bands and Turnover Tax (3% option)
-    - PAYE for employers
-    - Business registration via eCitizen / BRS
-    - Hustler Fund loans
-    - SACCOs
-    - County business permit (Single Business Permit)
-
-    IMPORTANT: Always remind the customer that this is general information only
-    and they should consult a certified accountant or KRA directly for
-    advice specific to their situation.
-
-    Args:
-        topic: Specific topic to look up (e.g., "VAT", "Hustler Fund", "PAYE",
-               "business registration", "SACCO"), or "all" for everything.
-
-    Returns:
-        Relevant tax/compliance information with a disclaimer.
-    """
-    data = _load("kenyan-tax.json")
-    sections = data["sections"]
-
-    disclaimer = (
-        "\n⚠️  DISCLAIMER: This is general information only. "
-        "For advice specific to your business, consult a certified accountant "
-        "or contact KRA directly at itax.kra.go.ke or 0800 720 1000 (toll-free)."
-    )
-
-    if topic == "all":
-        lines = [
-            "Kenya Business & Tax Reference — Mama Mboga Bot",
-            f"Last reviewed: {data['last_reviewed']}",
-            f"Note: {data['note']}",
-            "=" * 50,
-        ]
-        for section in sections:
-            lines.append(f"\n=== {section['title']} ===")
-            lines.append(section["summary"])
-        lines.append(disclaimer)
-        return "\n".join(lines)
-
-    # Search sections by title or keywords
-    topic_lower = topic.lower()
-    results = [
-        s for s in sections
-        if topic_lower in s["title"].lower()
-        or any(topic_lower in kw.lower() for kw in s.get("keywords", []))
-    ]
-
-    if not results:
-        available = [s["title"] for s in sections]
-        return (
-            f"No tax info found for '{topic}'.\n"
-            f"Available topics: {', '.join(available)}"
-        )
-
-    lines = []
-    for s in results:
-        lines.append(f"=== {s['title']} ===\n{s['summary']}")
-    lines.append(disclaimer)
-    return "\n\n".join(lines)
-
-
-# ------------------------------------------------------------------
 # Entry point
 # ------------------------------------------------------------------
+def main() -> None:
+    """Main entry point for the MCP server."""
+    parser = argparse.ArgumentParser(description="Biashara Bot MCP Data Server")
+    parser.add_argument(
+        "--stdio",
+        action="store_true",
+        help="Run server in stdio mode (used by AI Toolkit Agent Builder)",
+    )
+    args = parser.parse_args()
+
+    if args.stdio:
+        print("Starting Biashara Bot MCP Data Server (stdio)...")
+        print("Tools available: search_business_faqs, get_product_catalogue")
+        mcp.run()
+    else:
+        print("Starting Biashara Bot MCP Data Server (HTTP)...")
+        print(f"📡 MCP endpoint available at: http://127.0.0.1:8000/mcp")
+        print("Tools available: search_business_faqs, get_product_catalogue")
+        asyncio.run(mcp.run_streamable_http_async())
+
+
 if __name__ == "__main__":
-    print("Starting Biashara Bot MCP Data Server...")
-    print("Transport: stdio (AI Toolkit will connect automatically)")
-    print("Tools available: search_business_faqs, get_product_catalogue,")
-    print("                 get_market_prices, get_tax_info")
-    mcp.run()
+    main()

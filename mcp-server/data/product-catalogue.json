@@ -1,272 +1,294 @@
 {
-  "business": "Mama Mboga Fresh Supplies",
+  "business": "Savanna Bites Restaurant",
   "currency": "KES",
   "last_updated": "2026-03-16",
-  "note": "Prices are retail (duka/stall) prices. Prices may vary slightly by season. All units are per piece or per bunch unless otherwise stated.",
+  "note": "Prices are per serving. Breakfast served 6:30–10:30 AM, Lunch 11:30 AM–3 PM, Snacks available all day. Prices include VAT.",
   "categories": [
     {
-      "name": "Leafy Vegetables",
-      "name_sw": "Mboga za Majani",
+      "name": "Breakfast",
+      "name_sw": "Kifungua Kinywa",
       "products": [
         {
-          "sku": "VEG-001",
-          "name_en": "Sukuma Wiki (Kale)",
-          "name_sw": "Sukuma Wiki",
-          "description": "Dark green leafy kale, grown in Kinangop. Excellent source of iron and vitamins.",
-          "price": 10,
-          "unit": "bunch",
-          "weight_approx_g": 300,
+          "sku": "BRK-001",
+          "name_en": "Mandazi (4 pcs) with Chai",
+          "name_sw": "Mandazi na Chai",
+          "description": "Freshly fried Swahili doughnuts served with a cup of Kenyan chai.",
+          "price": 120,
+          "unit": "serving",
           "in_stock": true,
           "seasonal": false,
-          "origin": "Kinangop, Nyandarua"
+          "origin": "Made in-house daily"
         },
         {
-          "sku": "VEG-002",
-          "name_en": "Spinach",
-          "name_sw": "Mchicha",
-          "description": "Tender baby spinach leaves, ideal for stews and salads.",
-          "price": 20,
-          "unit": "bunch",
-          "weight_approx_g": 250,
+          "sku": "BRK-002",
+          "name_en": "Eggs, Toast & Sausage",
+          "name_sw": "Mayai, Tosti na Soseji",
+          "description": "Two eggs (scrambled or fried), buttered toast, beef sausage, and sliced tomato.",
+          "price": 350,
+          "unit": "plate",
           "in_stock": true,
           "seasonal": false,
-          "origin": "Limuru, Kiambu"
+          "origin": "Made in-house"
         },
         {
-          "sku": "VEG-003",
-          "name_en": "African Nightshade",
-          "name_sw": "Managu",
-          "description": "Traditional leafy green, rich in nutrients. Popular in western Kenya cuisine.",
-          "price": 15,
-          "unit": "bunch",
-          "weight_approx_g": 200,
+          "sku": "BRK-003",
+          "name_en": "Uji (Porridge)",
+          "name_sw": "Uji",
+          "description": "Traditional Kenyan fermented millet porridge, sweetened to taste. Served warm.",
+          "price": 80,
+          "unit": "cup",
           "in_stock": true,
           "seasonal": false,
-          "origin": "Kisii / Kericho farms"
+          "origin": "Made in-house"
         },
         {
-          "sku": "VEG-004",
-          "name_en": "Amaranth",
-          "name_sw": "Terere",
-          "description": "Nutritious traditional green, mild flavour.",
-          "price": 15,
-          "unit": "bunch",
-          "weight_approx_g": 200,
+          "sku": "BRK-004",
+          "name_en": "Chapati & Beans",
+          "name_sw": "Chapati na Maharagwe",
+          "description": "Two soft chapatis with spiced kidney bean stew. A filling classic.",
+          "price": 200,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Made in-house"
+        },
+        {
+          "sku": "BRK-005",
+          "name_en": "Fruit Salad & Yoghurt",
+          "name_sw": "Saladi ya Matunda na Yoghat",
+          "description": "Seasonal fruit mix (banana, mango, watermelon, passion) with natural yoghurt.",
+          "price": 250,
+          "unit": "bowl",
           "in_stock": true,
           "seasonal": true,
-          "origin": "Murang'a"
+          "origin": "Seasonal fruit from local farms"
         },
         {
-          "sku": "VEG-005",
-          "name_en": "Cabbage",
-          "name_sw": "Kabichi",
-          "description": "Large firm cabbage heads, great for stews and salads.",
-          "price": 60,
-          "unit": "head",
-          "weight_approx_g": 1200,
+          "sku": "BRK-006",
+          "name_en": "Smokie Pasua with Kachumbari",
+          "name_sw": "Smokie Pasua na Kachumbari",
+          "description": "Grilled smokie sausage split open and topped with fresh kachumbari salsa.",
+          "price": 100,
+          "unit": "piece",
           "in_stock": true,
           "seasonal": false,
-          "origin": "Molo, Nakuru"
+          "origin": "Made in-house"
         }
       ]
     },
     {
-      "name": "Vegetables",
-      "name_sw": "Mboga",
+      "name": "Lunch",
+      "name_sw": "Chakula cha Mchana",
       "products": [
         {
-          "sku": "VEG-006",
-          "name_en": "Tomatoes",
-          "name_sw": "Nyanya",
-          "description": "Ripe red tomatoes, ideal for sauces, stews, and salads.",
+          "sku": "LUN-001",
+          "name_en": "Nyama Choma (Beef) with Ugali & Kachumbari",
+          "name_sw": "Nyama Choma na Ugali na Kachumbari",
+          "description": "Charcoal-grilled beef ribs served with ugali and fresh tomato-onion kachumbari.",
+          "price": 650,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Beef sourced from Laikipia ranches"
+        },
+        {
+          "sku": "LUN-002",
+          "name_en": "Chicken Stew with Chapati",
+          "name_sw": "Mchuzi wa Kuku na Chapati",
+          "description": "Slow-cooked chicken in tomato-coconut sauce, served with two chapatis.",
+          "price": 550,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Free-range chicken from Kiambu"
+        },
+        {
+          "sku": "LUN-003",
+          "name_en": "Tilapia (Fried) with Ugali & Sukuma",
+          "name_sw": "Sato wa Kukaanga na Ugali na Sukuma",
+          "description": "Whole fried tilapia from Lake Victoria, served with ugali and sautéed sukuma wiki.",
+          "price": 600,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Lake Victoria tilapia"
+        },
+        {
+          "sku": "LUN-004",
+          "name_en": "Githeri Special",
+          "name_sw": "Githeri Maalum",
+          "description": "Maize and beans stew with vegetables, served with avocado and a side salad.",
+          "price": 300,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Made in-house"
+        },
+        {
+          "sku": "LUN-005",
+          "name_en": "Pilau (Spiced Rice) with Kachumbari",
+          "name_sw": "Pilau na Kachumbari",
+          "description": "Aromatic Swahili spiced rice with beef, served with kachumbari and a banana.",
+          "price": 450,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Made in-house, Mombasa-style spice blend"
+        },
+        {
+          "sku": "LUN-006",
+          "name_en": "Mukimo with Stewed Beef",
+          "name_sw": "Mukimo na Nyama ya Kuchemsha",
+          "description": "Kikuyu-style mashed potatoes with peas, maize, and greens, served with beef stew.",
+          "price": 400,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Made in-house"
+        },
+        {
+          "sku": "LUN-007",
+          "name_en": "Beans Stew with Rice (Vegetarian)",
+          "name_sw": "Maharagwe na Wali",
+          "description": "Spiced kidney beans in tomato sauce served with steamed white rice. Vegan-friendly.",
+          "price": 280,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Made in-house"
+        }
+      ]
+    },
+    {
+      "name": "Snacks",
+      "name_sw": "Vitafunio",
+      "products": [
+        {
+          "sku": "SNK-001",
+          "name_en": "Samosa (Beef) — 3 pcs",
+          "name_sw": "Sambusa ya Nyama (3)",
+          "description": "Crispy fried pastry triangles filled with spiced minced beef.",
+          "price": 150,
+          "unit": "serving (3 pcs)",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Made in-house"
+        },
+        {
+          "sku": "SNK-002",
+          "name_en": "Bhajia (Potato) — plate",
+          "name_sw": "Bhajia za Viazi",
+          "description": "Spiced potato fritters, Mombasa-style, served with tamarind chutney.",
+          "price": 180,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Made in-house"
+        },
+        {
+          "sku": "SNK-003",
+          "name_en": "Chips (French Fries)",
+          "name_sw": "Chipsi",
+          "description": "Hand-cut potato fries, crispy and golden. Add ketchup or chilli sauce.",
+          "price": 200,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Made in-house"
+        },
+        {
+          "sku": "SNK-004",
+          "name_en": "Chips Masala",
+          "name_sw": "Chipsi Masala",
+          "description": "French fries tossed with spiced onion-tomato masala sauce. Street food favourite.",
+          "price": 250,
+          "unit": "plate",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Made in-house"
+        },
+        {
+          "sku": "SNK-005",
+          "name_en": "Mishkaki (Beef Skewers) — 3 pcs",
+          "name_sw": "Mishkaki ya Nyama (3)",
+          "description": "Grilled beef skewers marinated in garlic-ginger sauce. Served with lime wedge.",
+          "price": 300,
+          "unit": "serving (3 skewers)",
+          "in_stock": true,
+          "seasonal": false,
+          "origin": "Made in-house"
+        },
+        {
+          "sku": "SNK-006",
+          "name_en": "Mutura (African Sausage)",
+          "name_sw": "Mutura",
+          "description": "Kenyan-style blood sausage grilled over charcoal. Served with kachumbari.",
+          "price": 100,
+          "unit": "piece",
+          "in_stock": false,
+          "seasonal": false,
+          "origin": "Made in-house (available evenings only)"
+        }
+      ]
+    },
+    {
+      "name": "Drinks",
+      "name_sw": "Vinywaji",
+      "products": [
+        {
+          "sku": "DRK-001",
+          "name_en": "Kenyan Chai (Tea)",
+          "name_sw": "Chai",
+          "description": "Classic Kenyan tea brewed with milk, ginger, and cardamom.",
           "price": 50,
-          "unit": "kg",
-          "weight_approx_g": 1000,
+          "unit": "cup",
           "in_stock": true,
           "seasonal": false,
-          "origin": "Mwea / Kirinyaga"
+          "origin": "Kericho tea leaves"
         },
         {
-          "sku": "VEG-007",
-          "name_en": "Onions (Red)",
-          "name_sw": "Vitunguu Maji (Nyekundu)",
-          "description": "Medium-sized red onions with strong flavour. Essential kitchen staple.",
+          "sku": "DRK-002",
+          "name_en": "Fresh Passion Juice",
+          "name_sw": "Juisi ya Passion",
+          "description": "Freshly squeezed passion fruit juice, sweetened to taste.",
+          "price": 150,
+          "unit": "glass",
+          "in_stock": true,
+          "seasonal": true,
+          "origin": "Seasonal fruit"
+        },
+        {
+          "sku": "DRK-003",
+          "name_en": "Mango Juice",
+          "name_sw": "Juisi ya Maembe",
+          "description": "Fresh blended mango juice. Available during mango season (Oct–Mar).",
+          "price": 150,
+          "unit": "glass",
+          "in_stock": true,
+          "seasonal": true,
+          "origin": "Embu/Meru mangoes"
+        },
+        {
+          "sku": "DRK-004",
+          "name_en": "Soda (Coke, Fanta, Sprite)",
+          "name_sw": "Soda",
+          "description": "300ml bottle. Coca-Cola, Fanta Orange, or Sprite.",
           "price": 80,
-          "unit": "kg",
-          "weight_approx_g": 1000,
+          "unit": "bottle",
           "in_stock": true,
           "seasonal": false,
-          "origin": "Rongai, Nakuru"
+          "origin": "KWAL"
         },
         {
-          "sku": "VEG-008",
-          "name_en": "Carrots",
-          "name_sw": "Karoti",
-          "description": "Fresh orange carrots, sweet and crunchy.",
-          "price": 60,
-          "unit": "kg",
-          "weight_approx_g": 1000,
+          "sku": "DRK-005",
+          "name_en": "Water (500ml)",
+          "name_sw": "Maji",
+          "description": "Bottled still water.",
+          "price": 50,
+          "unit": "bottle",
           "in_stock": true,
           "seasonal": false,
-          "origin": "Limuru / Tigoni"
-        },
-        {
-          "sku": "VEG-009",
-          "name_en": "Green Pepper (Capsicum)",
-          "name_sw": "Pilipili Hoho (Kijani)",
-          "description": "Mild green bell pepper, great for stir-fries and salads.",
-          "price": 20,
-          "unit": "piece",
-          "weight_approx_g": 120,
-          "in_stock": true,
-          "seasonal": false,
-          "origin": "Thika / Ruiru"
-        },
-        {
-          "sku": "VEG-010",
-          "name_en": "Garlic",
-          "name_sw": "Kitunguu Saumu",
-          "description": "Whole garlic bulbs, aromatic and flavourful.",
-          "price": 30,
-          "unit": "bulb (3 cloves)",
-          "weight_approx_g": 50,
-          "in_stock": true,
-          "seasonal": false,
-          "origin": "Meru"
-        },
-        {
-          "sku": "VEG-011",
-          "name_en": "Courgette (Zucchini)",
-          "name_sw": "Boga",
-          "description": "Tender courgettes, mild flavour.",
-          "price": 40,
-          "unit": "piece",
-          "weight_approx_g": 250,
-          "in_stock": false,
-          "seasonal": true,
-          "origin": "Limuru"
-        },
-        {
-          "sku": "VEG-012",
-          "name_en": "Ginger",
-          "name_sw": "Tangawizi",
-          "description": "Fresh ginger root for cooking and chai.",
-          "price": 20,
-          "unit": "piece (~50g)",
-          "weight_approx_g": 50,
-          "in_stock": true,
-          "seasonal": false,
-          "origin": "Coastal Kenya / Tanzania"
-        }
-      ]
-    },
-    {
-      "name": "Fruits",
-      "name_sw": "Matunda",
-      "products": [
-        {
-          "sku": "FRT-001",
-          "name_en": "Avocado (Hass)",
-          "name_sw": "Parachichi (Hass)",
-          "description": "Creamy Hass avocado, rich in healthy fats. Peak season Mar–Jun.",
-          "price": 30,
-          "unit": "piece",
-          "weight_approx_g": 200,
-          "in_stock": true,
-          "seasonal": true,
-          "peak_season": "March–June",
-          "origin": "Muranga / Kiambu"
-        },
-        {
-          "sku": "FRT-002",
-          "name_en": "Banana (Cooking / Matoke)",
-          "name_sw": "Ndizi (Matoke)",
-          "description": "Green cooking bananas for ugali accompaniment or stew.",
-          "price": 80,
-          "unit": "bunch (~8 fingers)",
-          "weight_approx_g": 600,
-          "in_stock": true,
-          "seasonal": false,
-          "origin": "Kisii / Mt. Elgon"
-        },
-        {
-          "sku": "FRT-003",
-          "name_en": "Banana (Sweet / Cavendish)",
-          "name_sw": "Ndizi Tamu",
-          "description": "Ripe sweet bananas for eating fresh.",
-          "price": 10,
-          "unit": "piece",
-          "weight_approx_g": 120,
-          "in_stock": true,
-          "seasonal": false,
-          "origin": "Kisii"
-        },
-        {
-          "sku": "FRT-004",
-          "name_en": "Mango (Kent)",
-          "name_sw": "Embe (Kent)",
-          "description": "Juicy Kent mango. Best Jan–Mar from Embu farms.",
-          "price": 40,
-          "unit": "piece",
-          "weight_approx_g": 400,
-          "in_stock": true,
-          "seasonal": true,
-          "peak_season": "January–March (Embu/Meru), October–December (Mombasa)",
-          "origin": "Embu / Meru"
-        },
-        {
-          "sku": "FRT-005",
-          "name_en": "Passion Fruit",
-          "name_sw": "Passiflora / Matunda ya Tamu",
-          "description": "Purple passion fruit, sweet and tangy. Great for juicing.",
-          "price": 10,
-          "unit": "piece",
-          "weight_approx_g": 80,
-          "in_stock": true,
-          "seasonal": false,
-          "origin": "Kiambu / Murang'a"
-        }
-      ]
-    },
-    {
-      "name": "Herbs & Spices",
-      "name_sw": "Viungo na Mimea",
-      "products": [
-        {
-          "sku": "HRB-001",
-          "name_en": "Coriander (Dhania)",
-          "name_sw": "Dhania",
-          "description": "Fresh coriander herb, essential for garnishing stews and pilau.",
-          "price": 10,
-          "unit": "bunch",
-          "weight_approx_g": 50,
-          "in_stock": true,
-          "seasonal": false,
-          "origin": "Nairobi peri-urban farms"
-        },
-        {
-          "sku": "HRB-002",
-          "name_en": "Spring Onions (Scallions)",
-          "name_sw": "Vitunguu Maji Mabichi",
-          "description": "Fresh spring onions with green tops.",
-          "price": 10,
-          "unit": "bunch",
-          "weight_approx_g": 100,
-          "in_stock": true,
-          "seasonal": false,
-          "origin": "Limuru"
-        },
-        {
-          "sku": "HRB-003",
-          "name_en": "Lemon Grass",
-          "name_sw": "Mchaichai",
-          "description": "Aromatic lemongrass for tea and cooking.",
-          "price": 20,
-          "unit": "bunch",
-          "weight_approx_g": 150,
-          "in_stock": false,
-          "seasonal": true,
-          "origin": "Coastal Kenya"
+          "origin": "N/A"
         }
       ]
     }

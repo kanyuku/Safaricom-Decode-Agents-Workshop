@@ -1,17 +1,18 @@
 {
   "business": {
-    "name": "Mama Mboga Fresh Supplies",
-    "tagline": "Fresh from the farm, straight to your table",
-    "founded": 2018,
-    "location": "Stall 14, Gikomba Market, Nairobi",
-    "phone": "+254 712 345 678",
-    "whatsapp": "+254 712 345 678",
-    "email": "orders@mamambogafresh.co.ke",
+    "name": "Savanna Bites Restaurant",
+    "tagline": "Real Kenyan flavour, every plate",
+    "founded": 2020,
+    "location": "Kijabe Street, off Koinange, Nairobi CBD",
+    "phone": "+254 722 456 789",
+    "whatsapp": "+254 722 456 789",
+    "email": "hello@savannabites.co.ke",
     "mpesa_paybill": "522522",
-    "mpesa_account": "MamaFresh",
+    "mpesa_account": "SavannaBites",
     "hours": {
-      "weekdays": "Monday – Saturday: 6:00 AM – 7:00 PM",
-      "sunday": "Sunday: 7:00 AM – 2:00 PM"
+      "weekdays": "Monday – Friday: 6:30 AM – 9:00 PM",
+      "saturday": "Saturday: 7:00 AM – 10:00 PM",
+      "sunday": "Sunday: 8:00 AM – 4:00 PM"
     }
   },
   "faqs": [
@@ -20,90 +21,90 @@
       "category": "ordering",
       "question": "How do I place an order?",
       "question_sw": "Ninaweza kuagiza vipi?",
-      "answer": "You can order in three ways: (1) WhatsApp us at +254 712 345 678, (2) call us during business hours, or (3) visit us in person at Stall 14, Gikomba Market. For bulk orders above KES 10,000 please give us 24 hours notice.",
-      "answer_sw": "Unaweza kuagiza kwa njia tatu: (1) Tuma WhatsApp kwa +254 712 345 678, (2) Piga simu wakati wa biashara, au (3) Tujie moja kwa moja Stall 14, Gikomba Market.",
-      "keywords": ["order", "agiza", "buy", "purchase", "nunua", "how", "jinsi"]
+      "answer": "You can order by: (1) Walking in — we have a counter and sit-down area, (2) WhatsApp at +254 722 456 789 for pickup or delivery, (3) calling us during business hours. For office catering orders above KES 10,000, please give us 24 hours notice.",
+      "answer_sw": "Unaweza kuagiza kwa: (1) Kuja moja kwa moja, (2) WhatsApp +254 722 456 789 kwa kuchukua au utoaji, (3) Kupiga simu wakati wa biashara. Kwa maagizo ya ofisi zaidi ya KES 10,000, tupe masaa 24 ya awali.",
+      "keywords": ["order", "agiza", "buy", "purchase", "nunua", "how", "jinsi", "walk-in"]
     },
     {
       "id": 2,
       "category": "delivery",
-      "question": "What areas do you deliver to?",
-      "question_sw": "Mnatuma kwa maeneo gani?",
-      "answer": "We deliver within Nairobi including Eastlands (Jogoo Rd, Kayole, Umoja), CBD, Westlands, South B & C, Langata, and Kasarani. Delivery is FREE for orders over KES 2,000. For orders below KES 2,000, a flat delivery fee of KES 150 applies. We do not yet deliver outside Nairobi, but you can collect from our Gikomba stall.",
-      "answer_sw": "Tunatuma ndani ya Nairobi: Eastlands, CBD, Westlands, South B na C, Langata, na Kasarani. Utoaji ni BURE kwa maagizo zaidi ya KES 2,000. Kwa maagizo chini ya KES 2,000, ada ya KES 150 inatumika.",
-      "keywords": ["delivery", "utoaji", "tuma", "deliver", "area", "eneo", "location", "Nairobi", "Westlands", "Eastlands"]
+      "question": "Do you deliver and to which areas?",
+      "question_sw": "Mnatuma chakula na kwa maeneo gani?",
+      "answer": "Yes! We deliver within Nairobi CBD, Westlands, Upper Hill, Kilimani, Hurlingham, and South B/C. Delivery fee: FREE for orders above KES 1,500, otherwise KES 200 flat. Lunchtime delivery (11 AM – 2 PM) is prioritised for office orders. We also partner with Glovo and Uber Eats for wider coverage.",
+      "answer_sw": "Ndiyo! Tunatuma ndani ya Nairobi CBD, Westlands, Upper Hill, Kilimani, Hurlingham, na South B/C. Utoaji BURE kwa maagizo zaidi ya KES 1,500, vinginevyo KES 200. Pia tupo kwenye Glovo na Uber Eats.",
+      "keywords": ["delivery", "utoaji", "tuma", "deliver", "area", "eneo", "location", "Nairobi", "Westlands", "CBD", "Glovo", "Uber Eats"]
     },
     {
       "id": 3,
       "category": "payment",
       "question": "What payment methods do you accept?",
       "question_sw": "Mnakubali malipo gani?",
-      "answer": "We accept: (1) M-Pesa – Paybill 522522, Account: MamaFresh; (2) Cash – at our stall or on delivery; (3) Bank transfer – for wholesale orders above KES 20,000 (contact us for bank details). We do NOT accept cheques.",
-      "answer_sw": "Tunakubali: (1) M-Pesa – Paybill 522522, Akaunti: MamaFresh; (2) Pesa taslimu; (3) Uhamisho wa benki kwa maagizo makubwa ya zaidi ya KES 20,000.",
-      "keywords": ["payment", "malipo", "pay", "lipa", "mpesa", "M-Pesa", "cash", "bank", "how to pay"]
+      "answer": "We accept: (1) M-Pesa – Paybill 522522, Account: SavannaBites, (2) Cash – at the counter or on delivery, (3) Visa/Mastercard – we have a POS terminal, (4) Bank transfer – for catering invoices above KES 20,000.",
+      "answer_sw": "Tunakubali: (1) M-Pesa – Paybill 522522, Akaunti: SavannaBites, (2) Pesa taslimu, (3) Visa/Mastercard, (4) Uhamisho wa benki kwa maagizo makubwa zaidi ya KES 20,000.",
+      "keywords": ["payment", "malipo", "pay", "lipa", "mpesa", "M-Pesa", "cash", "bank", "card", "visa", "how to pay"]
     },
     {
       "id": 4,
-      "category": "freshness",
-      "question": "How fresh is your produce?",
-      "question_sw": "Mboga zenu ni mbichi kiasi gani?",
-      "answer": "Our produce arrives daily from Wakulima Market and directly from partner farms in Limuru, Kinangop (Nyandarua), and Molo. Most vegetables are harvested within 24–48 hours before reaching you. Leafy greens (sukuma wiki, spinach, managu) turn over daily. Root vegetables and onions may be 2–3 days post-harvest.",
-      "answer_sw": "Mboga zetu zinafika kila siku kutoka Soko la Wakulima na mashamba yetu washirika huko Limuru, Kinangop, na Molo. Mboga nyingi huvunwa ndani ya masaa 24–48 kabla ya kufika kwako.",
-      "keywords": ["fresh", "mbichi", "freshness", "quality", "ubora", "old", "harvested", "vunwa", "farm", "shamba"]
+      "category": "catering",
+      "question": "Do you do office catering or event orders?",
+      "question_sw": "Mnafanya catering ya ofisi au hafla?",
+      "answer": "Yes! We cater for offices, meetings, and events. Options: (1) Daily office lunch packages from KES 350 per person (min 10 people), (2) Event platters — samosa, bhajia, and sandwich platters from KES 5,000, (3) Full event catering with service staff — contact us for a custom quote. We need at least 48 hours notice for event orders.",
+      "answer_sw": "Ndiyo! Tunafanya catering kwa ofisi, mikutano, na hafla. Tunahitaji masaa 48 ya awali kwa maagizo ya hafla. Wasiliana nasi kwa bei maalum.",
+      "keywords": ["catering", "event", "hafla", "office", "ofisi", "meeting", "mkutano", "corporate", "platter", "function"]
     },
     {
       "id": 5,
-      "category": "wholesale",
-      "question": "Do you offer wholesale prices?",
-      "question_sw": "Mnaauza jumla?",
-      "answer": "Yes! We offer wholesale pricing for hotels, restaurants, schools, and bulk buyers. Orders above KES 5,000 get a 15% discount. For a regular wholesale account with fixed weekly pricing, please call or WhatsApp +254 712 345 678. Minimum wholesale order is KES 3,000.",
-      "answer_sw": "Ndiyo! Tunatoa bei za jumla kwa mahoteli, mikahawa, shule, na wanunuzi wakubwa. Maagizo zaidi ya KES 5,000 yanapata punguzo la 15%. Kwa akaunti ya kawaida ya jumla, wasiliana nasi.",
-      "keywords": ["wholesale", "jumla", "bulk", "hotel", "restaurant", "mkahawa", "discount", "punguzo", "business", "biashara"]
+      "category": "dietary",
+      "question": "Do you have vegetarian or special diet options?",
+      "question_sw": "Mna vyakula vya mboga tu au mlo maalum?",
+      "answer": "Yes! We offer: vegetarian options (beans stew, lentil soup, veggie chapati wrap), vegan-friendly dishes (githeri, mukimo without butter on request), and gluten-free options (rice-based meals, grilled meats). Please inform us of any allergies when ordering. We cannot guarantee a fully allergen-free kitchen.",
+      "answer_sw": "Ndiyo! Tuna chaguo za mboga tu, vegan, na bila gluten. Tafadhali tuambie kuhusu mzio wowote unapoagiza.",
+      "keywords": ["vegetarian", "vegan", "diet", "allergy", "mzio", "gluten", "special", "mboga tu", "halal"]
     },
     {
       "id": 6,
-      "category": "subscriptions",
-      "question": "Do you offer weekly vegetable subscriptions?",
-      "question_sw": "Mna mpango wa mboga za kila wiki?",
-      "answer": "Yes! Our popular weekly baskets are: (1) Basic Basket (KES 700) – sukuma wiki, spinach, onions, tomatoes; (2) Family Basket (KES 1,200) – all of the above + carrots, cabbage, green pepper, dhania; (3) Premium Basket (KES 1,800) – all Family items + avocados, sweet peppers, courgettes. Delivery included for Nairobi. Subscribe via WhatsApp.",
-      "answer_sw": "Ndiyo! Vikapu vyetu vya kila wiki: (1) Kikapu cha Msingi (KES 700), (2) Kikapu cha Familia (KES 1,200), (3) Kikapu cha Premium (KES 1,800). Utoaji umejumuishwa Nairobi.",
-      "keywords": ["subscription", "mpango", "weekly", "kila wiki", "basket", "kikapu", "regular", "subscribe"]
+      "category": "loyalty",
+      "question": "Do you have a loyalty or rewards programme?",
+      "question_sw": "Mna mpango wa uaminifu au tuzo?",
+      "answer": "Yes! Our Bites Club card gives you a stamp for every purchase above KES 500. Collect 10 stamps and get a FREE meal worth up to KES 600. Pick up your card at the counter. For office accounts ordering 3+ times a week, we offer a 10% monthly discount.",
+      "answer_sw": "Ndiyo! Kadi yetu ya Bites Club inakupa muhuri kwa kila ununuzi zaidi ya KES 500. Kusanya muhuri 10 upate mlo BURE hadi KES 600.",
+      "keywords": ["loyalty", "uaminifu", "reward", "tuzo", "card", "kadi", "stamp", "muhuri", "discount", "punguzo", "club"]
     },
     {
       "id": 7,
-      "category": "returns",
-      "question": "What if the produce is not fresh or I am unhappy?",
-      "question_sw": "Nifanye nini kama mboga si mbichi?",
-      "answer": "We have a freshness guarantee. If you receive produce that is not up to standard, contact us within 24 hours via WhatsApp (+254 712 345 678) with a photo. We will either replace the item on your next delivery or issue a full refund via M-Pesa. Your satisfaction is our priority.",
-      "answer_sw": "Tuna dhamana ya ubichi. Kama umepokea mboga zisizo na ubora, wasiliana nasi ndani ya masaa 24 kupitia WhatsApp na picha. Tutabadilisha bidhaa au kurejesha pesa yako kamili kwa M-Pesa.",
-      "keywords": ["return", "refund", "unhappy", "problem", "tatizo", "bad", "mbaya", "replace", "badilisha", "guarantee", "dhamana"]
+      "category": "complaints",
+      "question": "What if I am unhappy with my food?",
+      "question_sw": "Nifanye nini kama sijaridhika na chakula?",
+      "answer": "Your satisfaction matters to us. If something is wrong with your order, let us know immediately (in person or via WhatsApp +254 722 456 789). We will either replace the dish, offer a credit for your next visit, or issue a refund via M-Pesa. Feedback within 1 hour of delivery is appreciated so we can act fast.",
+      "answer_sw": "Kuridhika kwako ni muhimu kwetu. Kama kuna tatizo na agizo lako, tuambie mara moja. Tutabadilisha sahani, kutoa mkopo, au kurejesha pesa kwa M-Pesa.",
+      "keywords": ["complaint", "malalamiko", "unhappy", "problem", "tatizo", "bad", "mbaya", "refund", "replace", "feedback"]
     },
     {
       "id": 8,
       "category": "contact",
-      "question": "How can I contact Mama Mboga Fresh Supplies?",
+      "question": "How can I contact Savanna Bites?",
       "question_sw": "Ninawezaje kuwasiliana nanyi?",
-      "answer": "You can reach us via: Phone/WhatsApp: +254 712 345 678 | Email: orders@mamambogafresh.co.ke | In person: Stall 14, Gikomba Market, Nairobi | Business hours: Mon–Sat 6 AM–7 PM, Sun 7 AM–2 PM.",
-      "answer_sw": "Unaweza kutufikia kwa: Simu/WhatsApp: +254 712 345 678 | Barua pepe: orders@mamambogafresh.co.ke | Uso kwa uso: Stall 14, Soko la Gikomba.",
-      "keywords": ["contact", "wasiliana", "phone", "simu", "email", "barua pepe", "address", "anwani", "reach", "find"]
+      "answer": "Phone/WhatsApp: +254 722 456 789 | Email: hello@savannabites.co.ke | Instagram: @savannabites | Location: Kijabe Street, off Koinange, Nairobi CBD | Hours: Mon–Fri 6:30 AM–9 PM, Sat 7 AM–10 PM, Sun 8 AM–4 PM.",
+      "answer_sw": "Simu/WhatsApp: +254 722 456 789 | Barua pepe: hello@savannabites.co.ke | Instagram: @savannabites | Mahali: Kijabe Street, Nairobi CBD.",
+      "keywords": ["contact", "wasiliana", "phone", "simu", "email", "barua pepe", "address", "anwani", "reach", "find", "instagram", "location"]
     },
     {
       "id": 9,
-      "category": "seasonal",
-      "question": "Do you sell mangoes and avocados all year?",
-      "question_sw": "Mnaauza maembe na parachichi mwaka wote?",
-      "answer": "Avocados (parachichi) are available most of the year from farms in Muranga and Kiambu, but peak season is March–June. Mangoes (maembe) are seasonal – peak season is October–December (Mombasa/Coast mangoes) and January–March (Embu/Meru mangoes). Outside season we may have limited stock or they may not be available. Ask us via WhatsApp for today's availability.",
-      "answer_sw": "Parachichi zinapatikana mwaka mwingi, lakini msimu mkuu ni Machi–Juni. Maembe ni ya msimu – Oktoba–Desemba (Pwani) na Januari–Machi (Embu/Meru). Uliza via WhatsApp kwa upatikanaji wa leo.",
-      "keywords": ["mango", "embe", "avocado", "parachichi", "seasonal", "msimu", "available", "patikana", "year", "mwaka"]
+      "category": "hours",
+      "question": "What are your opening hours?",
+      "question_sw": "Mnafungua saa ngapi?",
+      "answer": "Monday – Friday: 6:30 AM – 9:00 PM | Saturday: 7:00 AM – 10:00 PM | Sunday: 8:00 AM – 4:00 PM. Breakfast is served 6:30 AM – 10:30 AM, lunch 11:30 AM – 3:00 PM, snacks available all day.",
+      "answer_sw": "Jumatatu–Ijumaa: 6:30 AM–9 PM | Jumamosi: 7 AM–10 PM | Jumapili: 8 AM–4 PM. Kifungua kinywa: 6:30–10:30 AM, chakula cha mchana: 11:30 AM–3 PM, vitafunio mchana kutwa.",
+      "keywords": ["hours", "saa", "open", "fungua", "close", "funga", "time", "wakati", "breakfast", "lunch"]
     },
     {
       "id": 10,
-      "category": "ordering",
-      "question": "What is the minimum order amount?",
-      "question_sw": "Kiwango cha chini cha agizo ni nini?",
-      "answer": "There is no minimum order for in-person purchases at our stall. For delivery orders, the minimum is KES 500. For wholesale (discounted) pricing, the minimum order is KES 3,000.",
-      "answer_sw": "Hakuna kiwango cha chini kwa ununuzi wa moja kwa moja. Kwa maagizo ya utoaji, kiwango cha chini ni KES 500. Kwa bei za jumla, kiwango cha chini ni KES 3,000.",
-      "keywords": ["minimum", "kiwango cha chini", "minimum order", "kiwango", "least", "small order", "500"]
+      "category": "reservations",
+      "question": "Can I reserve a table?",
+      "question_sw": "Naweza kuhifadhi meza?",
+      "answer": "We are mostly a casual walk-in restaurant, but you can reserve for groups of 6 or more by calling or WhatsApp. For private dining (birthday, baby shower), we can set aside our back area for groups of 15–30 people — KES 5,000 reservation fee, redeemable against your food bill.",
+      "answer_sw": "Tunapokea wateja bila kuhifadhi, lakini unaweza kuhifadhi kwa vikundi vya watu 6 au zaidi kwa kupiga simu au WhatsApp. Kwa hafla za kibinafsi (siku ya kuzaliwa), tunaweza kutengea eneo la nyuma kwa watu 15–30.",
+      "keywords": ["reserve", "hifadhi", "table", "meza", "booking", "group", "kikundi", "private", "party", "birthday"]
     }
   ]
 }
