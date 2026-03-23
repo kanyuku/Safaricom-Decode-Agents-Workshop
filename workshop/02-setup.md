@@ -2,7 +2,7 @@
 
 ## 1) Confirm VS Code extensions
 
-Open VS Code and install the following extensions are installed:
+Open VS Code and ensure the following extensions are installed:
 
 - [AI Toolkit](https://aka.ms/AIToolkit) (includes Microsoft Foundry)
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
@@ -11,16 +11,17 @@ Open VS Code and install the following extensions are installed:
 
 1. Head over to event link: *## will be added day of the event*
 1. Follow the instructions to generate your API Key
-1. Once you get your Event API keys, follow the next set of instructions to add your models to AI Toolkit
+1. Once you get your Event API keys, follow the next set of instructions below to add your models to AI Toolkit
 
-## 2) Add models to AI Toolkit
+## 3) Add models to AI Toolkit
+
 1. Open the **AI Toolkit** extension in the Activity Bar.
-1. Go to **My resources > connected resources** in the pop-up select **Add Custom Model**.
-1. In the next pop-up, go back to the event.link and copy the **Endpoint**, then click enter
-1. In the next pop-up, go back to the event.link and copy the **Model**, then click enter
-1. In the next pop-up, leave model name as is, then click enter.
-1. In the next pop-up, go back to the event link and copy the **Event API Key**, then click enter.
-1. A pop up will appear on your left with the following title, **Model added successfully. Try the model in the playground.**
+1. Go to **My resources > connected resources**, hover on **Models** and click on the **+** sign. Select **Add Custom Model**.
+1. **Endpoint URL.** Copy the **gpt-4.1-mini Endpoint** value from the event.link, paste it here, then click enter
+1. **Model name.** Copy the **Model** value from the event.link, paste it here, then click enter
+1. **Display model name.** Leave default model name as is, then click enter.
+1. **API Key.** Copy the **Event API Key** value from the event.link, paste it here, then click enter
+1. A pop up will appear on your right with the following title, **Model added successfully. Try the model in the playground.**
 
 ## 4) Install Python dependencies
 

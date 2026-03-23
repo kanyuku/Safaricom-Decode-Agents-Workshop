@@ -17,13 +17,13 @@ Open `.vscode/mcp.json` and confirm the server entry points to:
 
 ```
 
-In VS Code, navigate to the `.vscode/mcp.json` file and click **Start** above the `biashara-bot-data` server to launch it.
+In VS Code, navigate to the `.vscode/mcp.json` file and click **Start** above the `biashara-bot-data-http` server to launch it.
 
 ## 2) Enable tools in Agent Builder
 
-1. Scroll to the **Tools** section of the Agent Builder. 
+1. Scroll to the **Tools** section of the Agent Builder.
 1. Click on the **+** icon, next to tools then select, **MCP Server > Could not find one? Browse more MCP Servers**
-1. In the new tab, select **Custom** then navigate to **mcp.json** then select the edit button.
+1. In the new tab, select **Custom** then click the **Edit** button under **mcp.json**.
 1. A new **mcp.json** file will be opened, paste the following code to your file:
 
 ```json
@@ -39,12 +39,14 @@ In VS Code, navigate to the `.vscode/mcp.json` file and click **Start** above th
 
 ```
 
-## 4) Test with grounded queries
+Back on the Agent Builder, in the **Tools** section, click on the **+** icon, next to tools then select **biashara-bot-data-http** MCP Server.
 
-Now ask questions that require grounded data:
+## 3) Test with grounded queries
+
+ Now ask questions that require grounded data:
 
 ```text
-What do you have for breakfast and how much does it cost?
+What's on the menu for breakfast and how much does it cost?
 ```
 
 ```text
@@ -92,6 +94,8 @@ python server.py
 
 4. **Restart the MCP connection** in VS Code — open `.vscode/mcp.json` and click **Stop** then **Start** on the server entry so the Agent Builder picks up the new tool.
 
+    In Agent Builder, delete the MCP Server, and the re-add it to refresh the tool list. You should now see 3 tools available.
+
 5. **Test it** — ask the agent these questions and verify it uses your new tool:
 
 ```text
@@ -105,5 +109,8 @@ Which ingredients have rising prices? Should I be worried about food costs?
 ```text
 Bei ya nyama kwa jumla ni ngapi sasa hivi?
 ```
+### Save again
+
+Save to Local after adding the guardrails.
 
 Continue to [06-evaluation.md](06-evaluation.md).

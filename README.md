@@ -1,8 +1,6 @@
 # Biashara Bot Workshop
 
-Build a bilingual AI assistant for a Nairobi restaurant using **Microsoft Foundry** and the **AI Toolkit** in VS Code.
-
-> Based on [BRK441: Build and launch AI agents fast with Microsoft Foundry and the AI Toolkit](https://github.com/microsoft/aitour26-BRK441-Build-and-launch-AI-agents-fast-with-Microsoft-Foundry-and-the-AI-Toolkit)
+Build a bilingual (English, Swahili), AI assistant for Savanna Bites restaurant (Nairobi), using **Microsoft Foundry** and the **AI Toolkit** in VS Code.
 
 ## Start Here
 
@@ -25,3 +23,7 @@ Build a bilingual AI assistant for a Nairobi restaurant using **Microsoft Foundr
 1. **MCP Tools** — connect the local data server for grounded answers
 1. **Evaluation** — run manual and AI-assisted evaluations on agent responses
 1. **Export Code** — export agent code for production with Microsoft Agent Framework
+
+## Additional Resources
+
+1. [BRK441: Build and launch AI agents fast with Microsoft Foundry and the AI Toolkit](https://github.com/microsoft/aitour26-BRK441-Build-and-launch-AI-agents-fast-with-Microsoft-Foundry-and-the-AI-Toolkit)
