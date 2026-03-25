@@ -20,10 +20,21 @@ pip install -r webapp/requirements.txt
 
 ## 3) Set your GitHub Token
 
-The web app uses GitHub Models as the LLM backend. Export your token in the terminal:
+The web app uses GitHub Models as the LLM backend. You need a **GitHub personal access token (PAT)** to authenticate.
+
+### Create a token
+
+1. Go to [github.com/settings/tokens](https://github.com/settings/tokens?type=beta) and click **Generate new token**.
+2. Select **Fine-grained token** (recommended) or **Classic token**.
+3. Give it a descriptive name, e.g. `biashara-bot-workshop`.
+4. Set an expiration (7 days is fine for a workshop).
+5. **Permissions required:** No additional scopes are needed — the default public access is sufficient for GitHub Models.
+6. Click **Generate token** and copy the value immediately (you won't see it again).
+
+### Export the token
 
 ```bash
-export GITHUB_TOKEN="your-github-personal-access-token"
+export GITHUB_TOKEN="ghp_your-token-here"
 ```
 
 > **Tip:** You can also create a `webapp/.env` file with `GITHUB_TOKEN=your-token` — the app loads `.env` files automatically.
