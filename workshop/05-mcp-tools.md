@@ -61,22 +61,22 @@ The agent should now return answers grounded in actual menu data and FAQ entries
 
 ## 5) Bonus Challenge: Build Your Own Tool 🛠️
 
-The MCP server has a third data file — `mcp-server/data/market-prices.json` — that contains wholesale ingredient prices from Wakulima and Gikomba markets. **No tool exposes this data yet.** Your task is to add one.
+The MCP server has a third data file — `mcp-server/data/daily-specials.json` — that contains today's daily specials, combo deals, and current promotions at Savanna Bites. **No tool exposes this data yet.** Your task is to add one.
 
 ### Goal
 
-Create a new tool called `get_market_prices` in `mcp-server/server.py` so the agent can answer questions like:
+Create a new tool called `get_daily_specials` in `mcp-server/server.py` so the agent can answer questions like:
 
 ```text
-How much are onions and tomatoes at Wakulima market today?
+What's today's special at Savanna Bites?
 ```
 
 ```text
-Which vegetables have the biggest price increase this month?
+Do you have any combo deals for lunch?
 ```
 
 ```text
-I need to budget for a catering order — what are current wholesale prices for beef and chicken?
+Kuna offers zozote wiki hii?
 ```
 
 ### Step-by-step
@@ -99,15 +99,15 @@ python server.py
 5. **Test it** — ask the agent these questions and verify it uses your new tool:
 
 ```text
-What is the wholesale price of tomatoes right now?
+I'm coming in on Friday — any special deals?
 ```
 
 ```text
-Which ingredients have rising prices? Should I be worried about food costs?
+Is there a good deal for a group of four on Saturday?
 ```
 
 ```text
-Bei ya nyama kwa jumla ni ngapi sasa hivi?
+Mna promotion yoyote ya delivery wiki hii?
 ```
 ### Save again
 

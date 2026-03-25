@@ -1,0 +1,156 @@
+{
+  "business": "Savanna Bites Restaurant",
+  "currency": "KES",
+  "last_updated": "2026-03-25",
+  "note": "Daily specials, combo deals, and promotions at Savanna Bites. Specials rotate weekly. Combo deals are available every day during the listed meal periods. Promotions have specific validity dates.",
+  "daily_specials": [
+    {
+      "day": "Monday",
+      "day_sw": "Jumatatu",
+      "name_en": "Mukimo Monday",
+      "name_sw": "Jumatatu ya Mukimo",
+      "description": "Mukimo with Stewed Beef plus a free cup of chai.",
+      "items": ["Mukimo with Stewed Beef", "Kenyan Chai"],
+      "regular_price": 480,
+      "special_price": 380,
+      "saving": 100,
+      "available": "11:30 AM – 3:00 PM"
+    },
+    {
+      "day": "Tuesday",
+      "day_sw": "Jumanne",
+      "name_en": "Tilapia Tuesday",
+      "name_sw": "Jumanne ya Sato",
+      "description": "Fried Tilapia with Ugali & Sukuma wiki plus a Dawa juice.",
+      "items": ["Tilapia (Fried) with Ugali & Sukuma", "Dawa Juice"],
+      "regular_price": 800,
+      "special_price": 650,
+      "saving": 150,
+      "available": "11:30 AM – 3:00 PM"
+    },
+    {
+      "day": "Wednesday",
+      "day_sw": "Jumatano",
+      "name_en": "Chapati Wednesday",
+      "name_sw": "Jumatano ya Chapati",
+      "description": "Buy any lunch plate with chapati and get a second chapati free.",
+      "items": ["Any lunch plate", "Extra Chapati (free)"],
+      "regular_price": null,
+      "special_price": null,
+      "saving": 50,
+      "available": "11:30 AM – 3:00 PM"
+    },
+    {
+      "day": "Thursday",
+      "day_sw": "Alhamisi",
+      "name_en": "Nyama Choma Thursday",
+      "name_sw": "Alhamisi ya Nyama Choma",
+      "description": "Nyama Choma plate with ugali, kachumbari, and a Tusker or Stoney Tangawizi.",
+      "items": ["Nyama Choma (Beef) with Ugali & Kachumbari", "Tusker or Stoney Tangawizi"],
+      "regular_price": 850,
+      "special_price": 700,
+      "saving": 150,
+      "available": "11:30 AM – 9:00 PM"
+    },
+    {
+      "day": "Friday",
+      "day_sw": "Ijumaa",
+      "name_en": "Pilau Friday",
+      "name_sw": "Ijumaa ya Pilau",
+      "description": "Pilau with Kachumbari plus a free samosa trio.",
+      "items": ["Pilau (Spiced Rice) with Kachumbari", "Samosa (Beef) — 3 pcs"],
+      "regular_price": 600,
+      "special_price": 480,
+      "saving": 120,
+      "available": "11:30 AM – 3:00 PM"
+    },
+    {
+      "day": "Saturday",
+      "day_sw": "Jumamosi",
+      "name_en": "Family Feast Saturday",
+      "name_sw": "Jumamosi ya Familia",
+      "description": "Family platter: 4 lunch plates of your choice plus free jug of passion juice. Minimum 4 people.",
+      "items": ["4× Any Lunch Plate", "Passion Juice Jug (1L)"],
+      "regular_price": 2200,
+      "special_price": 1800,
+      "saving": 400,
+      "available": "11:30 AM – 8:00 PM"
+    },
+    {
+      "day": "Sunday",
+      "day_sw": "Jumapili",
+      "name_en": "Brunch Sunday",
+      "name_sw": "Jumapili ya Brunch",
+      "description": "Any two breakfast items plus a fresh juice for one price.",
+      "items": ["2× Any Breakfast Item", "Fresh Juice"],
+      "regular_price": 700,
+      "special_price": 550,
+      "saving": 150,
+      "available": "8:00 AM – 1:00 PM"
+    }
+  ],
+  "combo_deals": [
+    {
+      "id": "COMBO-01",
+      "name_en": "Breakfast Combo",
+      "name_sw": "Kombo ya Kifungua Kinywa",
+      "description": "Mandazi (4 pcs) + Eggs, Toast & Sausage + Kenyan Chai",
+      "items": ["Mandazi (4 pcs) with Chai", "Eggs, Toast & Sausage", "Kenyan Chai"],
+      "regular_price": 570,
+      "combo_price": 450,
+      "saving": 120,
+      "available": "6:30 AM – 10:30 AM"
+    },
+    {
+      "id": "COMBO-02",
+      "name_en": "Office Lunch Combo",
+      "name_sw": "Kombo ya Ofisi",
+      "description": "Any lunch plate + drink + samosa trio. Perfect for a quick office lunch.",
+      "items": ["Any Lunch Plate", "Any Drink", "Samosa (Beef) — 3 pcs"],
+      "regular_price": 950,
+      "combo_price": 750,
+      "saving": 200,
+      "available": "11:30 AM – 3:00 PM"
+    },
+    {
+      "id": "COMBO-03",
+      "name_en": "Snack Attack Combo",
+      "name_sw": "Kombo ya Vitafunio",
+      "description": "Samosas + Bhajia + Chips + 2 drinks. Great for sharing.",
+      "items": ["Samosa (Beef) — 3 pcs", "Bhajia (Potato)", "Chips", "2× Any Drink"],
+      "regular_price": 830,
+      "combo_price": 650,
+      "saving": 180,
+      "available": "All day"
+    }
+  ],
+  "promotions": [
+    {
+      "id": "PROMO-01",
+      "name_en": "Bites Club Double Stamps",
+      "name_sw": "Muhuri Mara Mbili",
+      "description": "Earn DOUBLE loyalty stamps on every purchase this week. Collect 10 stamps, get a free meal worth up to KES 600.",
+      "valid_from": "2026-03-24",
+      "valid_to": "2026-03-30",
+      "conditions": "Applies to all purchases above KES 500. Must have a Bites Club card."
+    },
+    {
+      "id": "PROMO-02",
+      "name_en": "Free Delivery Week",
+      "name_sw": "Wiki ya Utoaji Bure",
+      "description": "Free delivery on ALL orders within our delivery zones — no minimum spend required.",
+      "valid_from": "2026-03-24",
+      "valid_to": "2026-03-30",
+      "conditions": "Delivery zones: Nairobi CBD, Westlands, Upper Hill, Kilimani, Hurlingham, South B/C."
+    },
+    {
+      "id": "PROMO-03",
+      "name_en": "Catering Early Bird",
+      "name_sw": "Punguzo la Catering",
+      "description": "Book a catering order for 20+ people before end of March and get 15% off the total.",
+      "valid_from": "2026-03-01",
+      "valid_to": "2026-03-31",
+      "conditions": "Minimum 20 people. Must book at least 48 hours in advance. Not combinable with other offers."
+    }
+  ]
+}
