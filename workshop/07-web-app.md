@@ -2,7 +2,7 @@
 
 ## 1) Overview
 
-The `webapp/` folder contains a standalone Flask chat interface for Biashara Bot. It connects to GitHub Models for the LLM and reuses the same JSON data files as the MCP server — no separate server process needed.
+The `webapp/` folder contains a standalone Flask chat interface for Biashara Bot. It connects to GitHub Models for the LLM and reuses the same JSON data files as the MCP server no separate server process needed. The idea here is to see your agent in action.
 
 ```
 Browser → Flask (webapp/app.py) → GitHub Models API
@@ -69,8 +69,6 @@ Niko Kilimani. Mnatuma huku na ni free delivery?
 ```text
 We have a meeting tomorrow with 20 people — can you handle that on short notice?
 ```
-
-The agent uses **function calling** behind the scenes — it automatically searches the FAQ and product catalogue JSON files to ground its answers in real restaurant data.
 
 ## 6) How it works
 
