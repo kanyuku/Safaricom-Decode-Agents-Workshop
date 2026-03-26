@@ -39,14 +39,4 @@ python mcp-server/server.py
 
 Keep this terminal running.
 
-## 6) Verify data files
-
-```bash
-ls mcp-server/data/
-```
-
-Expected files:
-- `business-faqs.json`
-- `product-catalogue.json`
-
 Continue to [03-model-agent.md](03-model-agent.md).

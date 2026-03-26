@@ -34,7 +34,7 @@ The web app uses GitHub Models as the LLM backend. You need a **GitHub personal 
 ### Export the token
 
 ```bash
-export GITHUB_TOKEN="ghp_your-token-here"
+export GITHUB_TOKEN="add-your-token-here"
 ```
 
 > **Tip:** You can also create a `webapp/.env` file with `GITHUB_TOKEN=your-token` — the app loads `.env` files automatically.
