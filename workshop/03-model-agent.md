@@ -14,12 +14,25 @@ For this workshop we use **gpt-4.1-mini** via custom models — it balances qual
 
 ## 2) Browse the AI Toolkit Model Catalog
 
-1. Open the **AI Toolkit** in the Activity Bar.
+<!-- TODO: Add screenshot of AI Toolkit icon in the Activity Bar -->
+
+1. Open the **AI Toolkit** in the Activity Bar (look for the AI Toolkit icon in the left sidebar).
 1. Navigate to **Developer Tools > Discover > Model Catalog**.
-1. Browse available **GitHub models** and compare capabilities.
-1. Try loading two models, gpt-4.1-mini and gpt-4.1-nano, in the **Model Playground** to compare their responses side-by-side.
+
+<!-- TODO: Add screenshot of the Model Catalog view -->
+
+
+1. In the **Model Catalog**, filter by **GitHub** as the provider.
+1. Find the model you want (e.g. `gpt-4.1-nano`) and click on it.
+1. Click **Try in Playground** on the model card.
+1. The model will load in the **Model Playground** where you can chat with it directly.
+1. Do the same for gpt-4.1-mini and compare in the playground.
+
+> **Tip:** You can open two models side-by-side in the Playground to compare their responses to the same prompt.
 
 ## 3) Create the agent in Agent Builder
+
+<!-- TODO: Add screenshot of the Agent Builder creation flow -->
 
 1. In AI Toolkit, go to **Developer Tools** → **+ Build** → **+ Create Agent** → **Open Agent Builder**.
 1. Name the agent: `Biashara-Bot`

@@ -10,7 +10,8 @@ This guide now points to split workshop sections under the [workshop](workshop/R
 1. [workshop/04-system-prompt.md](workshop/04-system-prompt.md)
 1. [workshop/05-mcp-tools.md](workshop/05-mcp-tools.md)
 1. [workshop/06-evaluation.md](workshop/06-evaluation.md)
-1. [workshop/07-export-code.md](workshop/07-export-code.md)
+1. [workshop/07-web-app.md](workshop/07-web-app.md)
+1. [workshop/08-export-code.md](workshop/08-export-code.md)
 
 ## Notes
 

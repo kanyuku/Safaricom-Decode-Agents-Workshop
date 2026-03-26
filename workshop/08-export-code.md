@@ -1,4 +1,4 @@
-# 07 - Export Agent Code & Next Steps
+# 08 - Export Agent Code & Next Steps
 
 ## 1) Why export to a Framework?
 
@@ -12,6 +12,8 @@ Exporting gives you:
 - **A path to Microsoft Foundry** — the exported code uses the Agent Framework SDK, which plugs directly into Foundry for production hosting, monitoring, and multi-agent orchestration
 
 ## 2) Export code from Agent Builder
+
+<!-- TODO: Add screenshot of the View Code button in Agent Builder -->
 
 1. In the Agent Builder, click the **View Code** button (top-right corner of the Agent Builder panel).
 

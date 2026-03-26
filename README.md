@@ -22,7 +22,28 @@ Build a bilingual (English, Swahili), AI assistant for Savanna Bites restaurant 
 1. **System Prompt** — define the agent's personality, role, and language behaviour
 1. **MCP Tools** — connect the local data server for grounded answers
 1. **Evaluation** — run manual and AI-assisted evaluations on agent responses
+1. **Web App** — deploy a Flask chat interface powered by the agent
 1. **Export Code** — export agent code for production with Microsoft Agent Framework
+
+## Getting Started
+
+### Fork this repo
+
+1. Click the **Fork** button at the top-right of this GitHub page.
+1. Clone your fork locally:
+
+```bash
+git clone https://github.com/<your-username>/Safaricom-Decode-Agents-Workshop.git
+cd Safaricom-Decode-Agents-Workshop
+```
+
+1. Open the folder in VS Code:
+
+```bash
+code .
+```
+
+Then follow the workshop steps starting at [workshop/01-overview.md](workshop/01-overview.md).
 
 ## Additional Resources
 

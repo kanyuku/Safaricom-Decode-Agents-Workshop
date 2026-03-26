@@ -2,6 +2,8 @@
 
 ## 1) Manual evaluation
 
+<!-- TODO: Add screenshot of the Evaluation tab in Agent Builder -->
+
 In the Agent Builder, switch to the **Evaluation** tab.
 
 1. Select **+ Add an Empty Row** five times to create 5 test rows.
@@ -27,6 +29,8 @@ In the Agent Builder, switch to the **Evaluation** tab.
 
 Use built-in evaluators to automatically score agent responses.
 
+<!-- TODO: Add screenshot of the Add Evaluation dialog with evaluator selection -->
+
 1. Create a new evaluation via the **Add Evaluation** button.
 1. Select the following evaluators: `relevance`, `coherence`.
 1. Select the `gpt-4.1-mini` model for the evaluator.
@@ -46,4 +50,4 @@ that answers menu, pricing, delivery, and catering questions?
 
 Copilot can recommend additional evaluators beyond relevance and coherence (e.g., groundedness, fluency) that you can add to future evaluation runs.
 
-Continue to [07-export-code.md](07-export-code.md).
+Continue to [07-web-app.md](07-web-app.md).

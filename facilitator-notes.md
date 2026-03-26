@@ -67,7 +67,7 @@
 1. **Identity** — without this, the model is lost
 1. **Language rule** — `reply in the user's language` is one of the most impactful lines
 1. **Personality** — warm, professional, honest, conversational
-1. **Save to Local** — emphasise version control. Name it `v1-basic-agent`.
+1. **Save to Local** — emphasise version control.
 
 **Common issue:** Participants paste incorrectly → tell them to only paste the block between the triple backticks.
 
@@ -82,10 +82,10 @@
 **Walk through the MCP concept:**
 - The `.vscode/mcp.json` file tells the Agent Builder where the data server is
 - The MCP server is like a specialist on the other end — the agent calls it, it answers
-- `type: stdio` means local communication — no internet, total privacy
+- `type: http` means local HTTP communication — the server runs at `http://127.0.0.1:8000/mcp`
 
 
-**Remind participants to save:** After connecting tools, save as `v2-tools-agent`.
+**Remind participants to save:** After connecting tools, save agent.
 
 **Common issues:**
 - MCP server not detected: Is `python mcp-server/server.py` still running? It must be active
@@ -100,14 +100,12 @@
 
 **Manual evaluation:**
 1. Walk through adding 4 test rows in the Evaluation tab
-1. Run responses and review them as a group
-1. Save as `v3-manual-evaluation`
+1. Run responses and review them.
 
 **AI-assisted evaluation:**
 1. Add an evaluation with `relevance` and `coherence` evaluators
 1. Select `gpt-4.1-mini` as the evaluator model
-1. Run and review scores
-1. Save as `v4-automated-evaluation`
+1. Run and review scores.
 
 > **Note:** The first run of AI-assisted evaluations downloads dependencies — warn participants this may take a moment.
 

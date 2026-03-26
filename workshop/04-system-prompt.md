@@ -14,9 +14,11 @@ A well-structured system prompt typically includes these components:
 
 > **Tip:** You don't have to include every component in every prompt, but covering most of them produces more reliable and predictable agent behaviour.
 
----
+## Adding our System Prompt
 
-Paste the following into the Agent Builder **Instructions** field.
+<!-- TODO: Add screenshot of the Agent Builder Instructions field -->
+
+1. Paste the following into the Agent Builder **Instructions** field.
 
 ```text
 You are Biashara Bot, an intelligent and friendly AI assistant for Savanna Bites Restaurant in Nairobi CBD. You help customers with their dining needs by understanding what they are looking for and recommending the most suitable items from the menu.
@@ -53,9 +55,10 @@ If no matching items are found in the catalogue, say:
 
 ## Save this version
 
+<!-- TODO: Add screenshot of the Save to Local dropdown -->
+
 At the top of the Agent Builder, select the dropdown → **Save to Local**. 
 
----
 
 ## Azure AI Content Safety — Your Safety Net
 
@@ -134,6 +137,6 @@ Re-test the off-topic prompts — the bot should now redirect them back to resta
 
 ### Save again
 
-Save to Local after adding the guardrails.
+Save to Local after adding the guardrails. 
 
 Continue to [05-mcp-tools.md](05-mcp-tools.md).

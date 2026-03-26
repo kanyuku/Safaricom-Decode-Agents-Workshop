@@ -1,8 +1,8 @@
-# 08 - Deploy the Chat Web App
+# 07 - Deploy the Chat Web App
 
 ## 1) Overview
 
-The `webapp/` folder contains a standalone Flask chat interface for Biashara Bot. It connects to GitHub Models for the LLM and reuses the same JSON data files as the MCP server no separate server process needed. The idea here is to see your agent in action.
+The `webapp/` folder contains a standalone Flask chat interface for Biashara Bot. It connects to GitHub Models for the LLM and reads the same JSON data files as the MCP server directly — **you do not need the MCP server running for this step**. The idea here is to see your agent in action.
 
 ```
 Browser → Flask (webapp/app.py) → GitHub Models API
@@ -10,15 +10,7 @@ Browser → Flask (webapp/app.py) → GitHub Models API
         mcp-server/data/*.json (menu + FAQs)
 ```
 
-## 2) Install dependencies
-
-Make sure your virtual environment is active, then install the web app requirements:
-
-```bash
-pip install -r webapp/requirements.txt
-```
-
-## 3) Set your GitHub Token
+## 2) Set your GitHub Token
 
 The web app uses GitHub Models as the LLM backend. You need a **GitHub personal access token (PAT)** to authenticate.
 
@@ -32,9 +24,11 @@ The web app uses GitHub Models as the LLM backend. You need a **GitHub personal 
 6. Click **Generate token** and copy the value immediately (you won't see it again).
 
 ### Export the token
+ 
+In a new terminal, ensuring you are in the virtual environment you cerated, add your GitHub token:
 
 ```bash
-export GITHUB_TOKEN="ghp_your-token-here"
+export GITHUB_TOKEN="add-your-token-here"
 ```
 
 > **Tip:** You can also create a `webapp/.env` file with `GITHUB_TOKEN=your-token` — the app loads `.env` files automatically.
@@ -90,3 +84,5 @@ You can customise the app with environment variables:
 | `GITHUB_TOKEN` | *(required)* | Your GitHub personal access token |
 | `MODEL` | `gpt-4.1-mini` | Model name to use |
 | `ENDPOINT` | `https://models.github.ai/inference` | OpenAI-compatible API endpoint |
+
+Continue to [08-export-code.md](08-export-code.md).
