@@ -2,6 +2,7 @@
 
 > **What is MCP?** MCP (Model Context Protocol) is an open standard that lets AI agents call external tools and data sources. Instead of the model guessing or hallucinating answers, MCP lets it *fetch* real data from a server you control. Think of it as giving your agent a phone it can use to call a specialist.
 
+## 1) MCP overview
 ## 2) Enable tools in Agent Builder
 
 <!-- TODO: Add screenshot of the Tools section in Agent Builder -->
