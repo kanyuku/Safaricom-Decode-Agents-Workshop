@@ -26,7 +26,7 @@ For this workshop we use **gpt-4.1-mini** via custom models — it balances qual
 1. Find the model you want (e.g. `gpt-4.1-nano`) and click on it.
 1. Click **Try in Playground** on the model card.
 1. The model will load in the **Model Playground** where you can chat with it directly.
-1. Do the same for gpt-4.1-mini and compare in the playgrounf.
+1. Do the same for gpt-4.1-mini and compare in the playground.
 
 > **Tip:** You can open two models side-by-side in the Playground to compare their responses to the same prompt.
 
