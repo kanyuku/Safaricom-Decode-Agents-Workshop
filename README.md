@@ -37,7 +37,7 @@ git clone https://github.com/<your-username>/Safaricom-Decode-Agents-Workshop.gi
 cd Safaricom-Decode-Agents-Workshop
 ```
 
-3. Open the folder in VS Code:
+1. Open the folder in VS Code:
 
 ```bash
 code .
