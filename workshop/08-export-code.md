@@ -2,7 +2,7 @@
 
 ## 1) Why export to a Framework?
 
-The Agent Builder is a prototyping environment — great for iterating on prompts, tools, and evaluations. But to ship Biashara Bot to real customers (WhatsApp, a website, an internal dashboard), you need **standalone code** that can run on a server, scale, and be version-controlled.
+The Agent Builder is a prototyping environment — great for iterating on prompts, tools, and evaluations. But to ship Biashara Agent to real customers (WhatsApp, a website, an internal dashboard), you need **standalone code** that can run on a server, scale, and be version-controlled.
 
 Exporting gives you:
 

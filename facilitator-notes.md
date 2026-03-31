@@ -1,4 +1,4 @@
-# Facilitator Notes — Biashara Bot Workshop
+# Facilitator Notes — Biashara Agent Workshop
 ### Safaricom Decode Agents Workshop · March 2026
 
 > **For facilitators only.** Participants use [lab-guide.md](lab-guide.md).

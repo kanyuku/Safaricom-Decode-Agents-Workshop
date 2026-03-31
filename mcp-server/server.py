@@ -1,7 +1,7 @@
 """
-Savanna Bites Restaurant — Biashara Bot MCP Data Server
+Savanna Bites Restaurant — Biashara Agent MCP Data Server
 =======================================================
-A FastMCP server that exposes business data for the Biashara Bot AI agent.
+A FastMCP server that exposes business data for the Biashara Agent AI agent.
 Participants: you do NOT need to edit this file during the workshop.
 Just run it, then configure your AI Toolkit agent to use it.
 
@@ -22,7 +22,7 @@ from pydantic import Field
 # ------------------------------------------------------------------
 # Server initialisation
 # ------------------------------------------------------------------
-mcp = FastMCP("Biashara Bot Data Server")
+mcp = FastMCP("Biashara Agent Data Server")
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 
@@ -144,7 +144,7 @@ def get_product_catalogue(
 # ------------------------------------------------------------------
 def main() -> None:
     """Main entry point for the MCP server."""
-    parser = argparse.ArgumentParser(description="Biashara Bot MCP Data Server")
+    parser = argparse.ArgumentParser(description="Biashara Agent MCP Data Server")
     parser.add_argument(
         "--stdio",
         action="store_true",
@@ -153,11 +153,11 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.stdio:
-        print("Starting Biashara Bot MCP Data Server (stdio)...")
+        print("Starting Biashara Agent MCP Data Server (stdio)...")
         print("Tools available: search_business_faqs, get_product_catalogue")
         mcp.run()
     else:
-        print("Starting Biashara Bot MCP Data Server (HTTP)...")
+        print("Starting Biashara Agent MCP Data Server (HTTP)...")
         print(f"📡 MCP endpoint available at: http://127.0.0.1:8000/mcp")
         print("Tools available: search_business_faqs, get_product_catalogue")
         asyncio.run(mcp.run_streamable_http_async())
