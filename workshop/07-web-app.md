@@ -2,7 +2,7 @@
 
 ## 1) Overview
 
-The `webapp/` folder contains a standalone Flask chat interface for Biashara Bot. It connects to GitHub Models for the LLM and reads the same JSON data files as the MCP server directly — **you do not need the MCP server running for this step**. The idea here is to see your agent in action.
+The `webapp/` folder contains a standalone Flask chat interface for Biashara Agent. It connects to GitHub Models for the LLM and reads the same JSON data files as the MCP server directly — **you do not need the MCP server running for this step**. The idea here is to see your agent in action.
 
 ```
 Browser → Flask (webapp/app.py) → GitHub Models API
@@ -42,13 +42,13 @@ python webapp/app.py
 You should see:
 
 ```
-🍽️  Biashara Bot Web App starting...
+🍽️  Biashara Agent Web App starting...
    Model: gpt-4.1-mini
    Endpoint: https://models.github.ai/inference
    Open http://127.0.0.1:5000 in your browser
 ```
 
-## 5) Chat with Biashara Bot
+## 5) Chat with Biashara Agent
 
 Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser. Try these questions:
 

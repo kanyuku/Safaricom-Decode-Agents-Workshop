@@ -2,7 +2,7 @@
 
 ## Goal
 
-Build **Biashara Bot**, a bilingual customer assistant for Savanna Bites restaurant (Nairobi) using **Microsoft Foundry** and the **AI Toolkit** in VS Code.
+Build **Biashara Agent**, a bilingual customer assistant for Savanna Bites restaurant (Nairobi) using **Microsoft Foundry** and the **AI Toolkit** in VS Code.
 
 ## Time
 

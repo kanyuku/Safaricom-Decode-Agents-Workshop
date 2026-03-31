@@ -1,4 +1,4 @@
-# Biashara Bot Workshop
+# Biashara Agent Workshop
 
 Build a bilingual (English, Swahili), AI assistant for Savanna Bites restaurant (Nairobi), using **Microsoft Foundry** and the **AI Toolkit** in VS Code.
 
@@ -18,7 +18,7 @@ Build a bilingual (English, Swahili), AI assistant for Savanna Bites restaurant 
 ## Workshop Flow
 
 1. **Explore & Compare Models** — use GitHub Copilot Agent Mode and AI Toolkit Model Catalog
-1. **Create Agent** — set up Biashara Bot in Agent Builder with `gpt-4.1-mini` via Microsoft Foundry
+1. **Create Agent** — set up Biashara Agent in Agent Builder with `gpt-4.1-mini` via Microsoft Foundry
 1. **System Prompt** — define the agent's personality, role, and language behaviour
 1. **MCP Tools** — connect the local data server for grounded answers
 1. **Evaluation** — run manual and AI-assisted evaluations on agent responses

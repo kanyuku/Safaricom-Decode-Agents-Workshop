@@ -1,5 +1,5 @@
 """
-Biashara Bot — Chat Web App
+Biashara Agent — Chat Web App
 ============================
 A Flask web app that lets you chat with the Savanna Bites Restaurant AI agent.
 
@@ -32,7 +32,7 @@ ENDPOINT = os.environ.get("ENDPOINT", "https://models.github.ai/inference")
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "mcp-server", "data")
 
 SYSTEM_PROMPT = (
-    "You are Biashara Bot, an intelligent and friendly AI assistant for "
+    "You are Biashara Agent, an intelligent and friendly AI assistant for "
     "Savanna Bites Restaurant in Nairobi CBD. You help customers with their "
     "dining needs by understanding what they are looking for and recommending "
     "the most suitable items from the menu.\n\n"
@@ -270,7 +270,7 @@ if __name__ == "__main__":
         print("   export GITHUB_TOKEN='your-github-token'")
         print("   Then re-run: python webapp/app.py")
         exit(1)
-    print(f"🍽️  Biashara Bot Web App starting...")
+    print(f"🍽️  Biashara Agent Web App starting...")
     print(f"   Model: {MODEL}")
     print(f"   Endpoint: {ENDPOINT}")
     print(f"   Open http://127.0.0.1:5000 in your browser")

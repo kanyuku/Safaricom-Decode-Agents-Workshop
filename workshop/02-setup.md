@@ -9,7 +9,7 @@ Open VS Code and ensure the following extensions are installed:
 
 ## 2) Access to models
 
-1. Head over to the event link provided by your facilitator.
+1. Head over to the event link: [https://gray-wave-002399710.1.azurestaticapps.net/event/3268-88a1](https://gray-wave-002399710.1.azurestaticapps.net/event/3268-88a1).
 1. Follow the instructions to generate your API Key
 1. Once you get your Event API keys, follow the next set of instructions below to add your models to AI Toolkit
 
@@ -46,7 +46,7 @@ python mcp-server/server.py
 You should see output like:
 
 ```
-Starting Biashara Bot MCP Data Server (HTTP)...
+Starting Biashara Agent MCP Data Server (HTTP)...
 📡 MCP endpoint available at: http://127.0.0.1:8000/mcp
 Tools available: search_business_faqs, get_product_catalogue
 ```
