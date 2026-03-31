@@ -13,8 +13,6 @@ Open VS Code and ensure the following extensions are installed:
 1. Follow the instructions to generate your API Key
 1. Once you get your Event API keys, follow the next set of instructions below to add your models to AI Toolkit
 
-> **Note to facilitators:** Update the event link before the session. See [facilitator-notes.md](../facilitator-notes.md).
-
 ## 3) Add models to AI Toolkit
 
 1. Open the **AI Toolkit** extension in the Activity Bar.

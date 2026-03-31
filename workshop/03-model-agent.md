@@ -1,6 +1,6 @@
 # 03 - Explore Models & Create the Agent
 
-## 1) Explore models with GitHub Copilot Agent Mode
+## 1) [Optional] Explore models with GitHub Copilot Agent Mode
 
 Open **GitHub Copilot Chat** in VS Code and switch to **Agent Mode**. Ask Copilot to recommend a model for your use case:
 
