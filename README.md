@@ -29,7 +29,7 @@ Build a bilingual (English, Swahili), AI assistant for Savanna Bites restaurant 
 
 ### Fork this repo
 
-1. Click the **Fork** button at the top-right of this GitHub page.
+1. [Fork](https://github.com/BethanyJep/Safaricom-Decode-Agents-Workshop/fork) this repository
 1. Clone your fork locally:
 
 ```bash

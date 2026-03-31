@@ -6,7 +6,7 @@ The Agent Builder is a prototyping environment — great for iterating on prompt
 
 Exporting gives you:
 
-- **A Python project** you can commit to Git and review in PRs
+- **A Python project** you can commit to GitHub and review in PRs
 - **Reproducible deployments** — the same agent runs identically every time
 - **Integration flexibility** — embed the agent in any app (Flask, FastAPI, WhatsApp webhook, etc.)
 - **A path to Microsoft Foundry** — the exported code uses the Agent Framework SDK, which plugs directly into Foundry for production hosting, monitoring, and multi-agent orchestration
@@ -16,6 +16,10 @@ Exporting gives you:
 <!-- TODO: Add screenshot of the View Code button in Agent Builder -->
 
 1. In the Agent Builder, click the **View Code** button (top-right corner of the Agent Builder panel).
+
+    - **SDK**: Microsoft Agent Framework
+    - **Programming Language**: Python
+    - Save file.
 
 1. The exported code uses the **Microsoft Agent Framework** SDK and authenticates via `azure-identity` (DefaultAzureCredential) to connect to your Microsoft Foundry project.
 
