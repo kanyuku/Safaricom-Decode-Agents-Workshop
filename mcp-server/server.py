@@ -140,6 +140,62 @@ def get_product_catalogue(
 
 
 # ------------------------------------------------------------------
+# Tool 3 — Daily Specials & Promotions
+# ------------------------------------------------------------------
+@mcp.tool()
+def get_daily_specials(
+    category: Annotated[str, Field(
+        description="Filter by category. Options: 'specials', 'combos', 'promotions', or 'all' (default)."
+    )] = "all",
+) -> str:
+    """Get today's daily specials, combo deals, and active promotions.
+
+    Use this tool to answer questions about:
+    - Today's special meal and its price
+    - Lunch combo deals (e.g. Office Lunch, Snack Attack)
+    - Weekly promotions and loyalty club offers
+    - Group deals and catering discounts
+    """
+    data = _load("daily-specials.json")
+    lines = [
+        f"Daily Specials & Offers — {data['business']}",
+        f"Note: {data['note']}",
+        "=" * 50,
+    ]
+
+    cat_lower = category.lower()
+
+    # 1. Daily Specials
+    if cat_lower in ["all", "specials", "daily"]:
+        lines.append("\n--- Weekly Daily Specials ---")
+        for s in data["daily_specials"]:
+            price_str = f"KES {s['special_price']}" if s["special_price"] else "See details"
+            lines.append(
+                f"  {s['day']} ({s['day_sw']}): {s['name_en']} / {s['name_sw']} — {price_str}"
+            )
+            lines.append(f"    {s['description']} (Available: {s['available']})")
+
+    # 2. Combo Deals
+    if cat_lower in ["all", "combos", "combo"]:
+        lines.append("\n--- Combo Deals (Every Day) ---")
+        for c in data["combo_deals"]:
+            lines.append(
+                f"  {c['name_en']} / {c['name_sw']}: KES {c['combo_price']} (Save KES {c['saving']})"
+            )
+            lines.append(f"    {c['description']} (Available: {c['available']})")
+
+    # 3. Promotions
+    if cat_lower in ["all", "promotions", "promo"]:
+        lines.append("\n--- Active Promotions ---")
+        for p in data["promotions"]:
+            lines.append(f"  {p['name_en']} / {p['name_sw']}")
+            lines.append(f"    {p['description']}")
+            lines.append(f"    Validity: {p['valid_from']} to {p['valid_to']}")
+
+    return "\n".join(lines)
+
+
+# ------------------------------------------------------------------
 # Entry point
 # ------------------------------------------------------------------
 def main() -> None:

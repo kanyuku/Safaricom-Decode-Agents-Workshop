@@ -4,314 +4,381 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biashara Agent — Savanna Bites</title>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #1B4332;
+            --primary-light: #2D6A4F;
+            --secondary: #FFD700;
+            --bg: #0F1A15;
+            --surface: rgba(255, 255, 255, 0.05);
+            --text-main: #E9ECEF;
+            --text-dim: #ADB5BD;
+            --user-msg: linear-gradient(135deg, #7B2FBF, #5B21B6);
+            --bot-msg: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f0f4f0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(27, 67, 50, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(123, 47, 191, 0.15) 0%, transparent 40%);
+            color: var(--text-main);
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: stretch;
+            overflow: hidden;
         }
 
-        #app-wrapper {
+        #app-container {
             width: 100%;
-            max-width: 520px;
+            max-width: 600px;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            height: 100vh;
-            background: #f8faf8;
-            box-shadow: 0 0 24px rgba(0,0,0,0.1);
+            background: rgba(15, 26, 21, 0.8);
+            backdrop-filter: blur(20px);
+            border-left: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            box-shadow: 0 0 100px rgba(0,0,0,0.5);
+            position: relative;
         }
 
         header {
-            background: linear-gradient(135deg, #2e7d4f, #3fa56b);
-            color: white;
-            padding: 16px 20px;
+            padding: 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            background: rgba(27, 67, 50, 0.2);
         }
 
-        header .brand {
+        .brand { display: flex; align-items: center; gap: 16px; }
+        .logo-circle {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: 14px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        header .brand .logo { font-size: 28px; }
-
-        header h1 {
-            font-size: 20px;
-            font-weight: 600;
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
+            letter-spacing: -0.5px;
+            color: var(--secondary);
         }
 
-        header .subtitle {
-            font-size: 12px;
-            opacity: 0.85;
-        }
+        .subtitle { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
 
         #reset-btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.4);
-            color: white;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-main);
             padding: 8px 16px;
-            border-radius: 8px;
-            cursor: pointer;
+            border-radius: 10px;
             font-size: 13px;
-            transition: background 0.2s;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        #reset-btn:hover { background: var(--surface); border-color: var(--secondary); color: var(--secondary); }
 
-        #reset-btn:hover { background: rgba(255,255,255,0.35); }
-
-        #chat-container {
+        #chat-window {
             flex: 1;
             overflow-y: auto;
-            padding: 20px 20px;
+            padding: 24px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
         }
+
+        .msg-wrapper { display: flex; flex-direction: column; max-width: 85%; animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .msg-wrapper.user { align-self: flex-end; }
+        .msg-wrapper.bot { align-self: flex-start; }
 
         .message {
-            max-width: 82%;
-            padding: 12px 16px;
-            border-radius: 16px;
-            line-height: 1.5;
-            font-size: 14px;
-            word-wrap: break-word;
-            white-space: pre-wrap;
+            padding: 14px 18px;
+            border-radius: 20px;
+            font-size: 15px;
+            line-height: 1.6;
+            position: relative;
         }
 
-        .message.user {
-            align-self: flex-end;
-            background: #7b2fbf;
+        .user .message {
+            background: var(--user-msg);
             color: white;
             border-bottom-right-radius: 4px;
+            box-shadow: 0 10px 20px rgba(123, 47, 191, 0.2);
         }
 
-        .message.assistant {
-            align-self: flex-start;
-            background: white;
-            color: #333;
+        .bot .message {
+            background: var(--bot-msg);
+            color: var(--text-main);
+            border: 1px solid var(--border);
             border-bottom-left-radius: 4px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            backdrop-filter: blur(5px);
         }
 
-        .message.assistant .msg-label {
+        .bot .label {
             font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary);
+            margin-bottom: 6px;
             font-weight: 600;
-            color: #2e7d4f;
-            margin-bottom: 4px;
-        }
-
-        .message.welcome {
-            align-self: center;
-            background: #f4f0fa;
-            border: 1px dashed #a88bc7;
-            color: #4a2d6b;
-            text-align: center;
-            max-width: 420px;
-            border-radius: 12px;
-        }
-
-        #input-area {
-            padding: 14px 20px;
-            background: white;
-            border-top: 1px solid #dde6dd;
             display: flex;
-            gap: 12px;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .welcome-card {
+            background: linear-gradient(135deg, rgba(27, 67, 50, 0.3), rgba(123, 47, 191, 0.1));
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .welcome-card h2 { font-family: 'Outfit', sans-serif; font-size: 24px; margin-bottom: 12px; color: var(--secondary); }
+        .welcome-card p { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+
+        #input-panel {
+            padding: 24px;
+            background: rgba(0,0,0,0.2);
+            border-top: 1px solid var(--border);
+        }
+
+        .input-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 8px;
+            display: flex;
             align-items: flex-end;
+            gap: 12px;
+            transition: border-color 0.3s;
         }
+        .input-box:focus-within { border-color: var(--secondary); }
 
-        #message-input {
+        textarea {
             flex: 1;
-            border: 1px solid #c8d4c8;
-            border-radius: 12px;
-            padding: 12px 16px;
-            font-size: 14px;
-            font-family: inherit;
+            background: transparent;
+            border: none;
+            color: var(--text-main);
+            padding: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
             resize: none;
-            max-height: 120px;
             outline: none;
-            transition: border-color 0.2s;
+            max-height: 150px;
         }
-
-        #message-input:focus { border-color: #5b3a8c; }
 
         #send-btn {
-            background: #2e7d4f;
-            color: white;
+            background: var(--secondary);
+            color: #000;
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
             border: none;
-            border-radius: 12px;
-            padding: 12px 24px;
-            font-size: 14px;
-            font-weight: 600;
             cursor: pointer;
-            transition: background 0.2s;
-            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 4px;
+            margin-right: 4px;
         }
+        #send-btn:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3); }
+        #send-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
-        #send-btn:hover { background: #236b40; }
-        #send-btn:disabled { background: #8db9a0; cursor: not-allowed; }
-
-        .typing-indicator {
-            align-self: flex-start;
-            background: white;
-            padding: 12px 20px;
-            border-radius: 16px;
+        /* Typing Indicator */
+        .typing {
+            display: flex;
+            gap: 5px;
+            padding: 12px 18px;
+            background: var(--bot-msg);
+            border-radius: 20px;
             border-bottom-left-radius: 4px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-            display: none;
+            width: fit-content;
+            margin-left: 24px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+            visibility: hidden;
         }
+        .typing.active { visibility: visible; }
+        .dot { width: 6px; height: 6px; background: var(--text-dim); border-radius: 50%; animation: pulse 1.4s infinite ease-in-out; }
+        .dot:nth-child(2) { animation-delay: 0.2s; }
+        .dot:nth-child(3) { animation-delay: 0.4s; }
 
-        .typing-indicator.visible { display: flex; gap: 4px; align-items: center; }
-
-        .typing-indicator span {
-            width: 8px;
-            height: 8px;
-            background: #a88bc7;
-            border-radius: 50%;
-            animation: bounce 1.4s infinite ease-in-out;
-        }
-
-        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
-        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
-
-        @keyframes bounce {
-            0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+        @keyframes pulse {
+            0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
             40% { transform: scale(1); opacity: 1; }
         }
 
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
         @media (max-width: 600px) {
-            #app-wrapper { max-width: 100%; }
-            .message { max-width: 88%; }
-            header h1 { font-size: 17px; }
-            #input-area { padding: 12px 16px; }
+            #app-container { border: none; }
+            header { padding: 16px; }
+            .welcome-card { padding: 20px; }
         }
     </style>
 </head>
 <body>
-    <div id="app-wrapper">
-    <header>
-        <div class="brand">
-            <span class="logo">🍽️</span>
-            <div>
-                <h1>Biashara Agent</h1>
-                <div class="subtitle">Savanna Bites Restaurant — Nairobi CBD</div>
+    <div id="app-container">
+        <header>
+            <div class="brand">
+                <div class="logo-circle">🦁</div>
+                <div>
+                    <h1>Biashara Agent</h1>
+                    <div class="subtitle">Savanna Bites • Nairobi CBD</div>
+                </div>
+            </div>
+            <button id="reset-btn" onclick="resetChat()">New Session</button>
+        </header>
+
+        <div id="chat-window">
+            <div class="welcome-card">
+                <h2>Karibu! 🍽️</h2>
+                <p>Welcome to Savanna Bites. I'm your AI guide to the best flavors in Nairobi. Ask me anything about our menu, today's specials, or catering!</p>
             </div>
         </div>
-        <button id="reset-btn" onclick="resetChat()">New Chat</button>
-    </header>
 
-    <div id="chat-container">
-        <div class="message welcome">
-            <strong>Karibu! Welcome to Savanna Bites 🍽️</strong><br>
-            Ask me about our menu, prices, delivery, or anything else.<br>
-            <em>Niulize kuhusu menyu, bei, utoaji, au chochote kingine!</em>
+        <div class="typing" id="typing-indicator">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
         </div>
-    </div>
 
-    <div class="typing-indicator" id="typing">
-        <span></span><span></span><span></span>
-    </div>
-
-    <div id="input-area">
-        <textarea id="message-input"
-                  placeholder="Type a message… / Andika ujumbe…"
-                  rows="1"
-                  autofocus></textarea>
-        <button id="send-btn" onclick="sendMessage()">Send</button>
-    </div>
+        <div id="input-panel">
+            <div class="input-box">
+                <textarea id="user-input" placeholder="Ask about our special menu..." rows="1" autofocus></textarea>
+                <button id="send-btn" onclick="handleSend()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
 
     <script>
         let sessionId = crypto.randomUUID();
-        const chatContainer = document.getElementById('chat-container');
-        const input = document.getElementById('message-input');
+        const chatWindow = document.getElementById('chat-window');
+        const userInput = document.getElementById('user-input');
         const sendBtn = document.getElementById('send-btn');
-        const typing = document.getElementById('typing');
+        const typingIndicator = document.getElementById('typing-indicator');
 
-        // Auto-resize textarea
-        input.addEventListener('input', () => {
-            input.style.height = 'auto';
-            input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+        // Auto-expand textarea
+        userInput.addEventListener('input', () => {
+            userInput.style.height = 'auto';
+            userInput.style.height = Math.min(userInput.scrollHeight, 150) + 'px';
         });
 
-        // Send on Enter (Shift+Enter for newline)
-        input.addEventListener('keydown', (e) => {
+        // Submit on Enter
+        userInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
-                sendMessage();
+                handleSend();
             }
         });
 
-        function addMessage(text, role) {
-            const div = document.createElement('div');
-            div.className = `message ${role}`;
-            if (role === 'assistant') {
-                div.innerHTML = `<div class="msg-label">Biashara Agent</div>${escapeHtml(text)}`;
-            } else {
-                div.textContent = text;
+        function appendMessage(role, content) {
+            const wrapper = document.createElement('div');
+            wrapper.className = `msg-wrapper ${role}`;
+            
+            let innerHTML = '';
+            if (role === 'bot') {
+                innerHTML += `<div class="label"><span style="font-size:14px">✨</span> Biashara Agent</div>`;
             }
-            chatContainer.appendChild(div);
-            chatContainer.scrollTop = chatContainer.scrollHeight;
+            
+            innerHTML += `<div class="message">${formatText(content)}</div>`;
+            wrapper.innerHTML = innerHTML;
+            
+            chatWindow.appendChild(wrapper);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
         }
 
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
+        function formatText(text) {
+            // Basic markdown handling for bold and newlines
+            return text
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>');
         }
 
-        async function sendMessage() {
-            const text = input.value.trim();
+        async function handleSend() {
+            const text = userInput.value.trim();
             if (!text) return;
 
-            addMessage(text, 'user');
-            input.value = '';
-            input.style.height = 'auto';
+            appendMessage('user', text);
+            userInput.value = '';
+            userInput.style.height = 'auto';
+            
             sendBtn.disabled = true;
-            typing.classList.add('visible');
-            chatContainer.scrollTop = chatContainer.scrollHeight;
+            typingIndicator.classList.add('active');
+            chatWindow.scrollTop = chatWindow.scrollHeight;
 
             try {
-                const res = await fetch('/api/chat', {
+                const response = await fetch('/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: text, session_id: sessionId }),
+                    body: JSON.stringify({ message: text, session_id: sessionId })
                 });
-                const data = await res.json();
+                
+                const data = await response.json();
+                
                 if (data.error) {
-                    addMessage(`Error: ${data.error}`, 'assistant');
+                    appendMessage('bot', `⚠️ Error: ${data.error}`);
                 } else {
                     sessionId = data.session_id;
-                    addMessage(data.response, 'assistant');
+                    appendMessage('bot', data.response);
                 }
             } catch (err) {
-                addMessage('Connection error. Is the server running?', 'assistant');
+                appendMessage('bot', "⚠️ Connection lost. Ensure the server is active.");
             } finally {
-                typing.classList.remove('visible');
+                typingIndicator.classList.remove('active');
                 sendBtn.disabled = false;
-                input.focus();
+                userInput.focus();
             }
         }
 
         async function resetChat() {
-            await fetch('/api/reset', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ session_id: sessionId }),
-            });
-            sessionId = crypto.randomUUID();
-            chatContainer.innerHTML = `
-                <div class="message welcome">
-                    <strong>Karibu! Welcome to Savanna Bites 🍽️</strong><br>
-                    Ask me about our menu, prices, delivery, or anything else.<br>
-                    <em>Niulize kuhusu menyu, bei, utoaji, au chochote kingine!</em>
-                </div>`;
+            if (confirm("Start a fresh conversation?")) {
+                await fetch('/api/reset', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ session_id: sessionId })
+                });
+                sessionId = crypto.randomUUID();
+                chatWindow.innerHTML = `
+                    <div class="welcome-card">
+                        <h2>Karibu! 🍽️</h2>
+                        <p>Welcome to Savanna Bites. I'm your AI guide to the best flavors in Nairobi. Ask me anything about our menu, today's specials, or catering!</p>
+                    </div>
+                `;
+            }
         }
     </script>
 </body>
